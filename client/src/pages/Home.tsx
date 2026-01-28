@@ -166,13 +166,14 @@ export default function Home() {
                 </div>
                 <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-l from-pink-500/20 to-transparent" />
               </div>
-              <div className="group relative overflow-hidden bg-zinc-900 border border-zinc-800 p-8 flex items-center justify-between">
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-heading font-bold mb-2">七喜 7-UP</h3>
-                  <p className="text-gray-400 text-sm mb-4">清爽柠檬，透心凉</p>
-                  <span className="text-xs font-bold uppercase tracking-widest text-primary">Coming Soon</span>
+              <div className="group relative overflow-hidden bg-zinc-900 border border-zinc-800 h-full min-h-[240px]">
+                <div className="absolute inset-0 bg-[url('/images/collab-7up-store.jpg')] bg-cover bg-center opacity-80 group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent" />
+                <div className="relative z-10 p-8 h-full flex flex-col justify-center">
+                  <h3 className="text-3xl font-heading font-bold mb-2 text-white">七喜 7-UP</h3>
+                  <p className="text-gray-200 text-sm mb-4 max-w-[200px]">清爽柠檬，透心凉。联名主题店限时登陆。</p>
+                  <span className="inline-block px-3 py-1 bg-[#009B4C] text-white text-xs font-bold uppercase tracking-widest w-fit">已上线</span>
                 </div>
-                <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-l from-green-500/20 to-transparent" />
               </div>
             </div>
           </div>
