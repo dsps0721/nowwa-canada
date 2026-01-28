@@ -25,20 +25,6 @@ export default function Home() {
       description: "天然减脂成分“甘油二酯”减少脂肪吸收~ 一杯热量≈0.5个牛油果，相当于做运动30分钟。",
       image: "/images/product-cheese-latte.png",
       tags: ["减少脂肪吸收", "≈0.5个牛油果"]
-    },
-    {
-      id: 4,
-      name: "青柚和白柚果茶(控糖版)",
-      description: "横州茉莉绿茶搭配青柚的酸甜和白柚浓香，低卡又清爽，不爱咖啡的宝子可以冲！",
-      image: "/images/product-orange-fruit-v2.png",
-      tags: ["控糖版", "茉莉茶底"]
-    },
-    {
-      id: 5,
-      name: "吨吨桶·柚C美式",
-      description: "更大容量！更低热量！满满维C，清爽柚香，超大杯满足你一整天的咖啡需求。",
-      image: "/images/product-tonton-real.jpg",
-      tags: ["更大容量", "更低热量"]
     }
   ];
 
