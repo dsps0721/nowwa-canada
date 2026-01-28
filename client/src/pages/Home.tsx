@@ -68,15 +68,8 @@ export default function Home() {
                   成为合伙人 <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <div className="flex items-center gap-4 px-6 py-3 bg-white rounded-full shadow-sm border border-gray-100">
-                <div className="flex -space-x-3">
-                  {[1,2,3].map(i => (
-                    <div key={i} className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white flex items-center justify-center text-[10px] font-bold text-gray-500">
-                      User
-                    </div>
-                  ))}
-                </div>
-                <span className="text-sm font-bold text-gray-600">10000+ 门店的选择</span>
+              <div className="flex items-center gap-4 px-8 py-4 bg-white rounded-full shadow-sm border border-gray-100">
+                <span className="text-base font-bold text-gray-600">10000+ 门店的选择</span>
               </div>
             </div>
           </div>
