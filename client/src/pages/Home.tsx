@@ -30,43 +30,74 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center justify-end overflow-hidden bg-background">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/20 z-10" />
-          <img 
-            src="/images/hero-store-queue.jpg" 
-            alt="挪瓦咖啡门店排队盛况" 
-            className="w-full h-full object-cover object-center"
-          />
-        </div>
+      {/* Hero Section - Fuwa Fuwa Style */}
+      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#FFF8F0]">
+        {/* Background Elements */}
+        <div className="absolute top-0 right-0 w-2/3 h-full bg-primary/5 rounded-l-[100px] -z-0" />
+        <div className="absolute bottom-0 left-0 w-1/3 h-1/2 bg-orange-100/50 rounded-tr-[100px] -z-0" />
         
-        <div className="container relative z-20 pt-20 flex justify-end">
-          <div className="max-w-xl p-8 md:p-12 bg-background/90 backdrop-blur-md shadow-2xl border-l-4 border-primary animate-in fade-in slide-in-from-right-8 duration-1000">
-            <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full bg-primary/10 text-primary border border-primary/20">
+        <div className="container relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center py-20">
+          {/* Left Content */}
+          <div className="space-y-8 animate-in fade-in slide-in-from-left-8 duration-1000">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-100 text-primary border border-orange-200">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
               </span>
-              <span className="text-xs font-bold tracking-wide uppercase">现已登陆加拿大</span>
+              <span className="text-sm font-bold tracking-wide uppercase">NOWWA CANADA</span>
             </div>
             
-            <h1 className="font-heading text-5xl md:text-7xl font-bold leading-[0.9] tracking-tighter text-foreground mb-6">
-              果咖<br />
-              <span className="text-primary">新革命</span>
+            <h1 className="font-heading text-6xl md:text-8xl font-bold leading-[0.9] tracking-tighter text-foreground">
+              LOW SUGAR<br />
+              <span className="text-primary">HEALTHY</span><br />
+              COFFEE
             </h1>
             
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-medium mb-8">
-              全球10000+门店的共同选择。低卡、健康、好喝，重新定义你的咖啡体验。
-            </p>
+            <div className="space-y-4">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
+                低糖 · 健康 · 果咖新革命
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-md leading-relaxed">
+                拒绝高热量，拥抱轻负担。我们用天然果糖替代传统糖浆，每一杯都是对身体的温柔呵护。
+              </p>
+            </div>
             
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-wrap gap-4 pt-4">
               <Link href="/franchise">
-                <Button size="lg" className="h-12 px-8 text-base font-heading font-bold uppercase tracking-wide rounded-none shadow-lg hover:shadow-primary/20 transition-all w-full sm:w-auto">
-                  成为合伙人 <ArrowRight className="ml-2 h-4 w-4" />
+                <Button size="lg" className="h-14 px-10 text-lg font-heading font-bold uppercase tracking-wide rounded-full shadow-xl hover:shadow-primary/20 hover:scale-105 transition-all duration-300">
+                  成为合伙人 <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              
+              <div className="flex items-center gap-4 px-6 py-3 bg-white rounded-full shadow-sm border border-gray-100">
+                <div className="flex -space-x-3">
+                  {[1,2,3].map(i => (
+                    <div key={i} className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white flex items-center justify-center text-[10px] font-bold text-gray-500">
+                      User
+                    </div>
+                  ))}
+                </div>
+                <span className="text-sm font-bold text-gray-600">10000+ 门店的选择</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Visual */}
+          <div className="relative h-[500px] md:h-[700px] w-full animate-in fade-in slide-in-from-right-8 duration-1000 delay-200">
+            <div className="absolute inset-0 bg-[url('/images/product-tonton-real.jpg')] bg-cover bg-center rounded-[40px] shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-700 ease-out z-10" />
+            <div className="absolute inset-0 bg-primary/20 rounded-[40px] -rotate-3 scale-95 z-0" />
+            
+            {/* Floating Elements */}
+            <div className="absolute -top-10 -right-10 bg-white p-6 rounded-2xl shadow-xl animate-bounce duration-[3000ms] z-20">
+              <div className="text-center">
+                <span className="block text-3xl font-bold text-primary">0糖</span>
+                <span className="text-xs text-gray-500 font-bold uppercase">Zero Sugar</span>
+              </div>
+            </div>
+            <div className="absolute bottom-20 -left-10 bg-white p-6 rounded-2xl shadow-xl animate-bounce duration-[4000ms] z-20">
+              <div className="text-center">
+                <span className="block text-3xl font-bold text-green-600">低卡</span>
+                <span className="text-xs text-gray-500 font-bold uppercase">Low Calorie</span>
+              </div>
             </div>
           </div>
         </div>
