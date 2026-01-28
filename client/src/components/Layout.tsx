@@ -121,33 +121,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </ul>
           </div>
 
-          <div>
-            <h4 className="font-heading font-bold text-lg mb-6 text-primary">联系方式</h4>
-            <ul className="space-y-3 text-sm text-muted-foreground">
-              <li>Toronto, ON, Canada</li>
-              <li>franchise@nowwa.ca</li>
-              <li>+1 (647) 123-4567</li>
-            </ul>
-          </div>
 
-          <div>
-            <h4 className="font-heading font-bold text-lg mb-6 text-primary">关注我们</h4>
-            <div className="flex gap-4">
-              {/* Social Icons Placeholder */}
-              <div className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
-                <span className="sr-only">Instagram</span>
-                IG
-              </div>
-              <div className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
-                <span className="sr-only">TikTok</span>
-                TT
-              </div>
-              <div className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
-                <span className="sr-only">WeChat</span>
-                WC
-              </div>
-            </div>
-          </div>
         </div>
         <div className="container mt-16 pt-8 border-t border-white/10 text-center text-xs text-muted-foreground">
           © {new Date().getFullYear()} 挪瓦咖啡加拿大总代理. 版权所有.
