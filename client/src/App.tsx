@@ -4,7 +4,7 @@ import Layout from "@/components/Layout";
 import NotFound from "@/pages/NotFound";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
-import Menu from "@/pages/Menu";
+
 import Franchise from "@/pages/Franchise";
 import Contact from "@/pages/Contact";
 import { Route, Switch } from "wouter";
@@ -17,7 +17,7 @@ function Router() {
       <Switch>
         <Route path="/" component={Home} />
         <Route path="/about" component={About} />
-        <Route path="/menu" component={Menu} />
+
         <Route path="/franchise" component={Franchise} />
         <Route path="/contact" component={Contact} />
         <Route component={NotFound} />

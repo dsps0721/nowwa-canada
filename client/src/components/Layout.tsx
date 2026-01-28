@@ -11,7 +11,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const navItems = [
     { name: "首页", path: "/" },
     { name: "关于我们", path: "/about" },
-    { name: "产品菜单", path: "/menu" },
+
     { name: "加盟合作", path: "/franchise" },
     { name: "联系我们", path: "/contact" },
   ];
@@ -117,7 +117,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li><Link href="/"><a className="hover:text-primary transition-colors">首页</a></Link></li>
               <li><Link href="/about"><a className="hover:text-primary transition-colors">品牌故事</a></Link></li>
-              <li><Link href="/menu"><a className="hover:text-primary transition-colors">产品菜单</a></Link></li>
+
               <li><Link href="/franchise"><a className="hover:text-primary transition-colors">加盟合作</a></Link></li>
             </ul>
           </div>
