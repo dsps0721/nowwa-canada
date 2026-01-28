@@ -32,28 +32,22 @@ export default function About() {
               <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-primary/10 -z-10" />
             </div>
             <div className="space-y-8">
-              <h2 className="font-heading text-4xl font-bold tracking-tighter">
-                Redefining<br />Coffee for Youth
+              <h2 className="font-heading text-4xl font-bold tracking-tighter whitespace-pre-line">
+                {t('about.story.title')}
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  Founded in June 2019 in Shanghai, NOWWA Coffee has grown into one of the world's top 5 coffee chains, with over 10,000 stores across 300+ cities.
-                </p>
-                <p>
-                  Our name "NOWWA" comes from "NOW", representing the "Live in the Moment" attitude. The running orange pony symbolizes vitality, confidence, and infinite possibilities.
-                </p>
-                <p>
-                  We pioneered the "Fruit Coffee" category, perfectly blending fresh fruits with premium coffee, breaking the traditional bitter impression of coffee, making it tastier, healthier, and more fun.
-                </p>
+                <p>{t('about.story.p1')}</p>
+                <p>{t('about.story.p2')}</p>
+                <p>{t('about.story.p3')}</p>
               </div>
               <div className="grid grid-cols-2 gap-8 pt-4">
                 <div>
                   <h4 className="font-heading text-4xl font-bold text-primary mb-2">2019</h4>
-                  <p className="text-sm text-muted-foreground uppercase tracking-wide">Founded</p>
+                  <p className="text-sm text-muted-foreground uppercase tracking-wide">{t('about.story.founded')}</p>
                 </div>
                 <div>
                   <h4 className="font-heading text-4xl font-bold text-primary mb-2">10000+</h4>
-                  <p className="text-sm text-muted-foreground uppercase tracking-wide">Global Stores</p>
+                  <p className="text-sm text-muted-foreground uppercase tracking-wide">{t('about.story.stores')}</p>
                 </div>
               </div>
             </div>
@@ -84,9 +78,9 @@ export default function About() {
       {/* CTA */}
       <section className="py-20 bg-secondary/30 text-center">
         <div className="container max-w-2xl">
-          <h2 className="font-heading text-4xl font-bold mb-8 tracking-tighter">Join Our Journey</h2>
+          <h2 className="font-heading text-4xl font-bold mb-8 tracking-tighter">{t('about.cta.title')}</h2>
           <p className="text-xl text-muted-foreground mb-10">
-            Whether you want to taste a good cup of coffee or start a new business, Nowwa Coffee welcomes you.
+            {t('about.cta.desc')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/franchise">

@@ -112,6 +112,14 @@ const translations = {
     'about.mission.desc': 'To provide healthy, low-sugar, and delicious coffee to everyone.',
     'about.vision.title': 'Our Vision',
     'about.vision.desc': 'To become the world\'s leading fruit coffee brand.',
+    'about.story.title': 'Redefining\nCoffee for Youth',
+    'about.story.p1': 'Founded in June 2019 in Shanghai, NOWWA Coffee has grown into one of the world\'s top 5 coffee chains, with over 10,000 stores across 300+ cities.',
+    'about.story.p2': 'Our name "NOWWA" comes from "NOW", representing the "Live in the Moment" attitude. The running orange pony symbolizes vitality, confidence, and infinite possibilities.',
+    'about.story.p3': 'We pioneered the "Fruit Coffee" category, perfectly blending fresh fruits with premium coffee, breaking the traditional bitter impression of coffee, making it tastier, healthier, and more fun.',
+    'about.story.founded': 'Founded',
+    'about.story.stores': 'Global Stores',
+    'about.cta.title': 'Join Our Journey',
+    'about.cta.desc': 'Whether you want to taste a good cup of coffee or start a new business, Nowwa Coffee welcomes you.',
     
     // Collabs
     'collab.tag': 'Brand Milestones',
@@ -231,6 +239,14 @@ const translations = {
     'about.mission.desc': '为每个人提供健康、低糖、美味的咖啡。',
     'about.vision.title': '我们的愿景',
     'about.vision.desc': '成为全球领先的果咖品牌。',
+    'about.story.title': '为年轻人\n重新定义咖啡',
+    'about.story.p1': 'NOWWA 挪瓦咖啡于 2019 年 6 月成立于上海，现已成长为全球前五大咖啡连锁品牌之一，在 300 多个城市拥有超过 10,000 家门店。',
+    'about.story.p2': '我们的名字 "NOWWA" 源自 "NOW"，代表着“活在当下”的态度。奔跑的橙色小马象征着活力、自信和无限可能。',
+    'about.story.p3': '我们开创了“果咖”品类，将新鲜水果与优质咖啡完美融合，打破了咖啡传统的苦涩印象，让咖啡更好喝、更健康、更有趣。',
+    'about.story.founded': '成立年份',
+    'about.story.stores': '全球门店',
+    'about.cta.title': '加入我们的旅程',
+    'about.cta.desc': '无论您是想品尝一杯好咖啡，还是开启一份新事业，挪瓦咖啡都欢迎您的加入。',
     
     // Collabs
     'collab.tag': '品牌里程碑',
