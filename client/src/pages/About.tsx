@@ -34,7 +34,7 @@ export default function About() {
               </h2>
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  NOWWA挪瓦咖啡成立于2019年6月，总部位于中国上海。作为全球前十大咖啡连锁品牌，我们已累计开设门店超过1800家，覆盖城市超过150座。
+                  NOWWA挪瓦咖啡成立于2019年6月，总部位于中国上海。作为全球前五大咖啡连锁品牌，我们已累计开设门店超过10000家，覆盖城市超过300座。
                 </p>
                 <p>
                   我们的名字"NOWWA"源自"NOW"，代表着"活在当下"的年轻态度。那匹奔跑的橙色小马，象征着活力、自信和无限可能。
@@ -49,7 +49,7 @@ export default function About() {
                   <p className="text-sm text-muted-foreground uppercase tracking-wide">品牌创立</p>
                 </div>
                 <div>
-                  <h4 className="font-heading text-4xl font-bold text-primary mb-2">1800+</h4>
+                  <h4 className="font-heading text-4xl font-bold text-primary mb-2">10000+</h4>
                   <p className="text-sm text-muted-foreground uppercase tracking-wide">全球门店</p>
                 </div>
               </div>

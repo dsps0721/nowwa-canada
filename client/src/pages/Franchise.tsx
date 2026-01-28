@@ -29,7 +29,7 @@ export default function Franchise() {
               <Users className="w-10 h-10 text-primary mb-6" />
               <h3 className="font-heading text-xl font-bold mb-3">全球品牌影响力</h3>
               <p className="text-muted-foreground text-sm">
-                依托全球1800+门店和数百万忠实用户的品牌势能，快速打开本地市场。
+                依托全球10000+门店和数百万忠实用户的品牌势能，快速打开本地市场。
               </p>
             </div>
             

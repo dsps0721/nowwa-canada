@@ -71,7 +71,7 @@ export default function Home() {
             </h1>
             
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-medium mb-8">
-              全球1800+门店的共同选择。低卡、健康、好喝，重新定义你的咖啡体验。
+              全球10000+门店的共同选择。低卡、健康、好喝，重新定义你的咖啡体验。
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -95,16 +95,16 @@ export default function Home() {
         <div className="container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
             <div className="space-y-2">
-              <h3 className="text-5xl md:text-6xl font-heading font-bold tracking-tighter">1800+</h3>
+              <h3 className="text-5xl md:text-6xl font-heading font-bold tracking-tighter">10000+</h3>
               <p className="text-primary-foreground/80 font-medium uppercase tracking-widest text-sm">全球门店</p>
             </div>
             <div className="space-y-2">
-              <h3 className="text-5xl md:text-6xl font-heading font-bold tracking-tighter">150+</h3>
+              <h3 className="text-5xl md:text-6xl font-heading font-bold tracking-tighter">300+</h3>
               <p className="text-primary-foreground/80 font-medium uppercase tracking-widest text-sm">覆盖城市</p>
             </div>
             <div className="space-y-2">
-              <h3 className="text-5xl md:text-6xl font-heading font-bold tracking-tighter">TOP3</h3>
-              <p className="text-primary-foreground/80 font-medium uppercase tracking-widest text-sm">外卖销量</p>
+              <h3 className="text-5xl md:text-6xl font-heading font-bold tracking-tighter">TOP5</h3>
+              <p className="text-primary-foreground/80 font-medium uppercase tracking-widest text-sm">全球连锁</p>
             </div>
             <div className="space-y-2">
               <h3 className="text-5xl md:text-6xl font-heading font-bold tracking-tighter">0糖</h3>
