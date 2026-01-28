@@ -13,7 +13,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { name: "关于我们", path: "/about" },
 
     { name: "加盟合作", path: "/franchise" },
-    { name: "联系我们", path: "/contact" },
   ];
 
   const isActive = (path: string) => location === path;

@@ -21,44 +21,7 @@ export default function Franchise() {
         </div>
       </section>
 
-      {/* Why Nowwa */}
-      <section className="py-24 bg-background">
-        <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="p-8 border border-border bg-card hover:shadow-lg transition-all">
-              <Users className="w-10 h-10 text-primary mb-6" />
-              <h3 className="font-heading text-xl font-bold mb-3">全球品牌影响力</h3>
-              <p className="text-muted-foreground text-sm">
-                依托全球10000+门店和数百万忠实用户的品牌势能，快速打开本地市场。
-              </p>
-            </div>
-            
-            <div className="p-8 border border-border bg-card hover:shadow-lg transition-all">
-              <DollarSign className="w-10 h-10 text-primary mb-6" />
-              <h3 className="font-heading text-xl font-bold mb-3">高效单店模型</h3>
-              <p className="text-muted-foreground text-sm">
-                小店型（300-500平方英尺），低投入，高坪效，优化的运营流程助力快速回本。
-              </p>
-            </div>
-            
-            <div className="p-8 border border-border bg-card hover:shadow-lg transition-all">
-              <CheckCircle2 className="w-10 h-10 text-primary mb-6" />
-              <h3 className="font-heading text-xl font-bold mb-3">全方位支持</h3>
-              <p className="text-muted-foreground text-sm">
-                从选址评估、店面设计、人员培训到供应链配送、市场营销，全程保驾护航。
-              </p>
-            </div>
-            
-            <div className="p-8 border border-border bg-card hover:shadow-lg transition-all">
-              <MapPin className="w-10 h-10 text-primary mb-6" />
-              <h3 className="font-heading text-xl font-bold mb-3">黄金市场机遇</h3>
-              <p className="text-muted-foreground text-sm">
-                抢占多伦多、温哥华、蒙特利尔等加拿大核心城市的首发优势。
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Process & Form */}
       <section className="py-24 bg-secondary/30 border-t border-border">
@@ -89,13 +52,13 @@ export default function Franchise() {
               <div className="relative">
                 <span className="absolute -left-[41px] top-0 w-5 h-5 rounded-full bg-border border-4 border-background"></span>
                 <h3 className="font-heading text-xl font-bold mb-2">04. 选址签约</h3>
-                <p className="text-muted-foreground">协助您评估并确定最佳店址，正式签署特许经营协议。</p>
+                <p className="text-muted-foreground">确定合作意向，签署协议，开启您的创业之旅。</p>
               </div>
               
               <div className="relative">
                 <span className="absolute -left-[41px] top-0 w-5 h-5 rounded-full bg-border border-4 border-background"></span>
                 <h3 className="font-heading text-xl font-bold mb-2">05. 开业筹备</h3>
-                <p className="text-muted-foreground">店面装修、设备安装、人员培训及开业营销策划。</p>
+                <p className="text-muted-foreground">完成开业前的各项准备工作，迎接盛大开业。</p>
               </div>
             </div>
           </div>
