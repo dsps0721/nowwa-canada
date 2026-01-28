@@ -45,43 +45,43 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[90vh] flex items-center overflow-hidden bg-background">
+      <section className="relative h-[90vh] flex items-center justify-end overflow-hidden bg-background">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent z-10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/20 z-10" />
           <img 
-            src="/images/hero-tonton-store.png" 
-            alt="挪瓦果咖系列" 
+            src="/images/hero-store-queue.jpg" 
+            alt="挪瓦咖啡门店排队盛况" 
             className="w-full h-full object-cover object-center"
           />
         </div>
         
-        <div className="container relative z-20 pt-20">
-          <div className="max-w-2xl space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-1000">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20 backdrop-blur-sm">
-              <span className="relative flex h-3 w-3">
+        <div className="container relative z-20 pt-20 flex justify-end">
+          <div className="max-w-xl p-8 md:p-12 bg-background/90 backdrop-blur-md shadow-2xl border-l-4 border-primary animate-in fade-in slide-in-from-right-8 duration-1000">
+            <div className="inline-flex items-center gap-2 px-3 py-1 mb-6 rounded-full bg-primary/10 text-primary border border-primary/20">
+              <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
               </span>
-              <span className="text-sm font-bold tracking-wide uppercase">现已登陆加拿大</span>
+              <span className="text-xs font-bold tracking-wide uppercase">现已登陆加拿大</span>
             </div>
             
-            <h1 className="font-heading text-6xl md:text-8xl font-bold leading-[0.9] tracking-tighter text-foreground drop-shadow-sm">
+            <h1 className="font-heading text-5xl md:text-7xl font-bold leading-[0.9] tracking-tighter text-foreground mb-6">
               果咖<br />
               <span className="text-primary">新革命</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-lg leading-relaxed font-medium">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed font-medium mb-8">
               全球1800+门店的共同选择。低卡、健康、好喝，重新定义你的咖啡体验。
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/franchise">
-                <Button size="lg" className="h-14 px-8 text-lg font-heading font-bold uppercase tracking-wide rounded-none shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-all">
-                  成为合伙人 <ArrowRight className="ml-2 h-5 w-5" />
+                <Button size="lg" className="h-12 px-8 text-base font-heading font-bold uppercase tracking-wide rounded-none shadow-lg hover:shadow-primary/20 transition-all w-full sm:w-auto">
+                  成为合伙人 <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
               <Link href="/menu">
-                <Button variant="outline" size="lg" className="h-14 px-8 text-lg font-heading font-bold uppercase tracking-wide rounded-none border-2 hover:bg-secondary/50 bg-background/50 backdrop-blur-sm">
+                <Button variant="outline" size="lg" className="h-12 px-8 text-base font-heading font-bold uppercase tracking-wide rounded-none border-2 hover:bg-secondary/50 w-full sm:w-auto">
                   浏览菜单
                 </Button>
               </Link>
