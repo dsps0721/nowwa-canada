@@ -227,57 +227,108 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-32 bg-background">
+      {/* Why Choose Us Section - Updated with Store Photos */}
+      <section className="py-24 bg-white overflow-hidden">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div className="space-y-12">
-              <div className="space-y-6">
-                <h2 className="font-heading text-4xl md:text-5xl font-bold tracking-tighter">
-                  为什么选择<br /><span className="text-primary">挪瓦咖啡</span>?
-                </h2>
-                <p className="text-xl text-muted-foreground leading-relaxed">
-                  我们不仅仅是在卖咖啡，我们正在创造一种年轻、活力、健康的生活方式。加入我们，成为加拿大咖啡市场的新力量。
-                </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Left: Content */}
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 text-primary border border-orange-100">
+                <span className="text-sm font-bold tracking-wide uppercase">BUSINESS SUCCESS</span>
               </div>
-
-              <div className="grid gap-8">
-                <div className="flex gap-6">
-                  <div className="h-14 w-14 bg-primary/10 flex items-center justify-center text-primary shrink-0">
-                    <TrendingUp className="h-7 w-7" />
+              
+              <h2 className="font-heading text-4xl md:text-5xl font-bold leading-tight">
+                开一家<br />
+                <span className="text-primary">排队火爆</span> 的咖啡店
+              </h2>
+              
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                不仅仅是咖啡，更是经过10000+门店验证的赚钱机器。全天候客流不断，超高复购率，让你的投资快速回报。
+              </p>
+              
+              <div className="space-y-6 pt-4">
+                {[
+                  {
+                    title: "超高坪效，快速回本",
+                    desc: "小店型大产出，极致的运营效率，让每一平米都产生价值。",
+                    icon: "💰"
+                  },
+                  {
+                    title: "全网爆款，自带流量",
+                    desc: "千万级粉丝基础，新品上市即爆品，无需担心客源问题。",
+                    icon: "🔥"
+                  },
+                  {
+                    title: "保姆式扶持，轻松开店",
+                    desc: "从选址到运营，总部全程陪跑，0经验也能开出火爆好店。",
+                    icon: "✨"
+                  }
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4 p-4 rounded-xl hover:bg-orange-50 transition-colors duration-300">
+                    <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-2xl">
+                      {item.icon}
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg mb-1">{item.title}</h3>
+                      <p className="text-muted-foreground text-sm">{item.desc}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-heading text-xl font-bold mb-2">高增长潜力</h3>
-                    <p className="text-muted-foreground">亚洲现象级品牌，经过市场验证的商业模式，加拿大市场潜力巨大。</p>
-                  </div>
-                </div>
-                <div className="flex gap-6">
-                  <div className="h-14 w-14 bg-primary/10 flex items-center justify-center text-primary shrink-0">
-                    <Users className="h-7 w-7" />
-                  </div>
-                  <div>
-                    <h3 className="font-heading text-xl font-bold mb-2">年轻化客群</h3>
-                    <p className="text-muted-foreground">深受Z世代喜爱，精准锁定最具消费力的年轻群体。</p>
-                  </div>
-                </div>
-                <div className="flex gap-6">
-                  <div className="h-14 w-14 bg-primary/10 flex items-center justify-center text-primary shrink-0">
-                    <Leaf className="h-7 w-7" />
-                  </div>
-                  <div>
-                    <h3 className="font-heading text-xl font-bold mb-2">健康理念</h3>
-                    <p className="text-muted-foreground">0糖低卡，符合当下健康饮食趋势，差异化竞争优势明显。</p>
-                  </div>
-                </div>
+                ))}
+              </div>
+              
+              <div className="pt-6">
+                <Link href="/franchise">
+                  <Button size="lg" className="h-14 px-10 text-lg font-heading font-bold uppercase tracking-wide rounded-full shadow-xl hover:shadow-primary/20 hover:scale-105 transition-all duration-300 w-full sm:w-auto">
+                    立即咨询加盟政策 <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
               </div>
             </div>
+            
+            {/* Right: Image Grid */}
             <div className="relative">
-              <div className="absolute -inset-4 border-2 border-primary/20 z-0" />
-              <img 
-                src="/images/store-interior.png" 
-                alt="挪瓦门店环境" 
-                className="relative z-10 w-full shadow-2xl"
-              />
+              <div className="grid grid-cols-2 gap-4">
+                <div className="space-y-4 translate-y-8">
+                  <div className="relative group overflow-hidden rounded-2xl shadow-lg aspect-[4/5]">
+                    <img 
+                      src="/images/store-queue-1.jpg" 
+                      alt="挪瓦咖啡门店排队盛况" 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                      <p className="text-white font-bold">开业即排队</p>
+                    </div>
+                  </div>
+                  <div className="relative group overflow-hidden rounded-2xl shadow-lg aspect-square">
+                    <img 
+                      src="/images/store-interior.jpg" 
+                      alt="挪瓦咖啡店内环境" 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="relative group overflow-hidden rounded-2xl shadow-lg aspect-square">
+                    <div className="w-full h-full bg-primary flex flex-col items-center justify-center text-white p-6 text-center">
+                      <span className="text-5xl font-bold mb-2">10000+</span>
+                      <span className="text-sm font-medium opacity-90">全球门店总数</span>
+                    </div>
+                  </div>
+                  <div className="relative group overflow-hidden rounded-2xl shadow-lg aspect-[4/5]">
+                    <img 
+                      src="/images/store-queue-2.jpg" 
+                      alt="挪瓦咖啡火爆人气" 
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                      <p className="text-white font-bold">单日出杯量 1000+</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Decorative Elements */}
+              <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-orange-100/30 rounded-full blur-3xl" />
             </div>
           </div>
         </div>
