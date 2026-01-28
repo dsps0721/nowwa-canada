@@ -25,12 +25,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           {/* Logo */}
           <Link href="/">
             <a className="flex items-center gap-2">
-              <div className="h-10 w-10 bg-primary flex items-center justify-center text-primary-foreground font-heading font-bold text-xl">
-                N
-              </div>
-              <span className="font-heading text-2xl font-bold tracking-tighter text-foreground">
-                NOWWA <span className="text-primary">CANADA</span>
-              </span>
+              <img src="/images/logo.png" alt="Nowwa Coffee" className="h-10 w-auto" />
             </a>
           </Link>
 
@@ -99,12 +94,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="container grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <div className="h-8 w-8 bg-primary flex items-center justify-center text-primary-foreground font-heading font-bold">
-                N
-              </div>
-              <span className="font-heading text-xl font-bold tracking-tighter text-background">
-                NOWWA <span className="text-primary">CANADA</span>
-              </span>
+              <img src="/images/logo.png" alt="Nowwa Coffee" className="h-8 w-auto brightness-0 invert" />
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
               将充满活力的果咖能量带到加拿大。加入这场健康、美味、时尚的咖啡革命。
