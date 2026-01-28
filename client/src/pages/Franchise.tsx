@@ -63,37 +63,37 @@ export default function Franchise() {
         <div className="container grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Process Steps */}
           <div className="space-y-12">
-            <h2 className="font-heading text-4xl font-bold mb-8">Process</h2>
+            <h2 className="font-heading text-4xl font-bold mb-8">{t('franchise.process.title')}</h2>
             
             <div className="relative border-l-2 border-border pl-8 space-y-12 ml-4">
               <div className="relative">
                 <span className="absolute -left-[41px] top-0 w-5 h-5 rounded-full bg-primary border-4 border-background"></span>
-                <h3 className="font-heading text-xl font-bold mb-2">01. {t('franchise.form.submit')}</h3>
-                <p className="text-muted-foreground">Fill out the form to submit your interest.</p>
+                <h3 className="font-heading text-xl font-bold mb-2">01. {t('franchise.process.step1.title')}</h3>
+                <p className="text-muted-foreground">{t('franchise.process.step1.desc')}</p>
               </div>
               
               <div className="relative">
                 <span className="absolute -left-[41px] top-0 w-5 h-5 rounded-full bg-border border-4 border-background"></span>
-                <h3 className="font-heading text-xl font-bold mb-2">02. Review</h3>
-                <p className="text-muted-foreground">Our team will review your application and contact you.</p>
+                <h3 className="font-heading text-xl font-bold mb-2">02. {t('franchise.process.step2.title')}</h3>
+                <p className="text-muted-foreground">{t('franchise.process.step2.desc')}</p>
               </div>
               
               <div className="relative">
                 <span className="absolute -left-[41px] top-0 w-5 h-5 rounded-full bg-border border-4 border-background"></span>
-                <h3 className="font-heading text-xl font-bold mb-2">03. Meeting</h3>
-                <p className="text-muted-foreground">Join our brand presentation and taste our products.</p>
+                <h3 className="font-heading text-xl font-bold mb-2">03. {t('franchise.process.step3.title')}</h3>
+                <p className="text-muted-foreground">{t('franchise.process.step3.desc')}</p>
               </div>
               
               <div className="relative">
                 <span className="absolute -left-[41px] top-0 w-5 h-5 rounded-full bg-border border-4 border-background"></span>
-                <h3 className="font-heading text-xl font-bold mb-2">04. Signing</h3>
-                <p className="text-muted-foreground">Sign the agreement and start your journey.</p>
+                <h3 className="font-heading text-xl font-bold mb-2">04. {t('franchise.process.step4.title')}</h3>
+                <p className="text-muted-foreground">{t('franchise.process.step4.desc')}</p>
               </div>
               
               <div className="relative">
                 <span className="absolute -left-[41px] top-0 w-5 h-5 rounded-full bg-border border-4 border-background"></span>
-                <h3 className="font-heading text-xl font-bold mb-2">05. Opening</h3>
-                <p className="text-muted-foreground">Prepare for the grand opening.</p>
+                <h3 className="font-heading text-xl font-bold mb-2">05. {t('franchise.process.step5.title')}</h3>
+                <p className="text-muted-foreground">{t('franchise.process.step5.desc')}</p>
               </div>
             </div>
           </div>
