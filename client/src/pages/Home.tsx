@@ -14,24 +14,24 @@ export default function Home() {
     },
     {
       id: 2,
-      name: "金杏超模半熟芝士拿铁",
-      description: "精选新疆杏和金太阳喜杏，搭配浓郁半熟芝士，口感层次丰富。",
-      image: "/images/product-orange-latte-v2.png",
-      tags: ["热销TOP1", "芝士控"]
+      name: "柚C美式",
+      description: "泰国青柚与九州白柚的双重果香，搭配IIAC金奖咖啡豆。每杯约100大卡，清爽解腻！",
+      image: "/images/product-yuzu-c.png",
+      tags: ["百卡低卡", "IIAC金奖豆"]
     },
     {
       id: 3,
-      name: "元气白桃气泡果咖",
-      description: "NOWWA x 元气森林联名款。清甜白桃遇上气泡美式，夏日解暑神器。",
-      image: "/images/collab-genki-peach.png",
-      tags: ["联名限定", "0糖"]
+      name: "双柚0脂拿铁",
+      description: "0脂乳+IIAC金奖豆！每100ml仅3.5g蛋白，一杯约160kcal，双柚香裹着咖啡香，清爽解腻。",
+      image: "/images/product-orange-latte-v2.png",
+      tags: ["0脂乳", "160kcal"]
     },
     {
       id: 4,
-      name: "元气葡萄气泡果咖",
-      description: "NOWWA x 元气森林联名款。浓郁葡萄果香，气泡感十足，唤醒活力。",
+      name: "青柚和白柚果茶(控糖版)",
+      description: "横州茉莉绿茶搭配青柚的酸甜和白柚浓香，低卡又清爽，不爱咖啡的宝子可以冲！",
       image: "/images/product-orange-fruit-v2.png",
-      tags: ["联名限定", "0糖"]
+      tags: ["控糖版", "茉莉茶底"]
     },
     {
       id: 5,
