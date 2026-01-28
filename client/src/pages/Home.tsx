@@ -135,8 +135,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Genki Forest Collab */}
             <div className="group relative h-[500px] overflow-hidden bg-zinc-900 border border-zinc-800">
-              <div className="absolute inset-0 bg-[url('/images/collab-genki-peach.png')] bg-cover bg-center opacity-60 group-hover:scale-105 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+              <div className="absolute inset-0 bg-[url('/images/collab-genki-poster.png')] bg-cover bg-center opacity-100 group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 p-10 w-full">
                 <div className="flex items-center gap-4 mb-6">
                   <span className="text-2xl font-bold">NOWWA</span>
