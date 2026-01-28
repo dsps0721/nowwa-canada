@@ -7,7 +7,7 @@ export default function Home() {
   const featuredProducts = [
     {
       id: 1,
-      name: "吨吨桶·美式",
+      name: "吨吨桶",
       description: "更大容量！更低热量！750ml超大杯，畅饮无负担，开启活力每一天。",
       image: "/images/product-tonton-real.jpg",
       tags: ["更大容量", "更低热量"]
@@ -21,10 +21,10 @@ export default function Home() {
     },
     {
       id: 3,
-      name: "双柚0脂拿铁",
-      description: "0脂乳+IIAC金奖豆！每100ml仅3.5g蛋白，一杯约160kcal，双柚香裹着咖啡香，清爽解腻。",
-      image: "/images/product-orange-latte-v2.png",
-      tags: ["0脂乳", "160kcal"]
+      name: "金杏超模半熟芝士拿铁",
+      description: "天然减脂成分“甘油二酯”减少脂肪吸收~ 一杯热量≈0.5个牛油果，相当于做运动30分钟。",
+      image: "/images/product-cheese-latte.png",
+      tags: ["减少脂肪吸收", "≈0.5个牛油果"]
     },
     {
       id: 4,
