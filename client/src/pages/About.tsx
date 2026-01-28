@@ -3,63 +3,127 @@ import { Link } from "wouter";
 
 export default function About() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col min-h-screen">
       {/* Header */}
-      <section className="bg-secondary/30 py-20 border-b border-border">
-        <div className="container text-center space-y-6">
-          <span className="text-primary font-bold uppercase tracking-wider">Our Story</span>
-          <h1 className="font-heading text-5xl md:text-7xl font-bold uppercase tracking-tighter text-foreground">
-            Redefining <span className="text-primary">Coffee</span>
+      <section className="bg-secondary/30 py-20 md:py-32">
+        <div className="container text-center max-w-4xl">
+          <h1 className="font-heading text-5xl md:text-7xl font-bold mb-8 tracking-tighter">
+            我们的<span className="text-primary">故事</span>
           </h1>
+          <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+            从上海到多伦多，我们始终致力于为年轻人提供一杯好喝、健康、有趣的咖啡。
+          </p>
         </div>
       </section>
 
-      {/* Content */}
-      <section className="py-24 bg-background">
-        <div className="container max-w-4xl space-y-16">
-          <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
-            <p>
-              <span className="font-bold text-foreground text-xl">Founded in Shanghai in 2019</span>, Nowwa Coffee has rapidly grown into one of the world's leading coffee chains with over 1,800 stores. Our mission was simple but ambitious: to create a coffee experience that is healthier, tastier, and more accessible to the younger generation.
-            </p>
-            <p>
-              We noticed that traditional coffee was often too bitter, too heavy, or too serious. We wanted to bring <span className="text-primary font-bold">energy, color, and fruit</span> into the mix.
-            </p>
-            <p>
-              By pioneering the "Fruit + Coffee" category, we created drinks like the Orange Americano, which became an instant viral sensation. It's not just a drink; it's a lifestyle statement—vibrant, healthy, and forward-looking.
-            </p>
+      {/* Brand Story */}
+      <section className="py-20 md:py-32">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div className="relative aspect-square md:aspect-[4/5]">
+              <img 
+                src="/images/store-interior.png" 
+                alt="挪瓦咖啡品牌故事" 
+                className="w-full h-full object-cover shadow-2xl"
+              />
+              <div className="absolute -bottom-8 -right-8 w-64 h-64 bg-primary/10 -z-10" />
+            </div>
+            <div className="space-y-8">
+              <h2 className="font-heading text-4xl font-bold tracking-tighter">
+                重新定义<br />年轻人的咖啡
+              </h2>
+              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  NOWWA挪瓦咖啡成立于2019年6月，总部位于中国上海。作为全球前十大咖啡连锁品牌，我们已累计开设门店超过1800家，覆盖城市超过150座。
+                </p>
+                <p>
+                  我们的名字"NOWWA"源自"NOW"，代表着"活在当下"的年轻态度。那匹奔跑的橙色小马，象征着活力、自信和无限可能。
+                </p>
+                <p>
+                  我们首创"果咖"品类，将新鲜水果与优质咖啡完美融合，打破了传统咖啡的苦涩印象，让咖啡变得更好喝、更健康、更有趣。
+                </p>
+              </div>
+              <div className="grid grid-cols-2 gap-8 pt-4">
+                <div>
+                  <h4 className="font-heading text-4xl font-bold text-primary mb-2">2019</h4>
+                  <p className="text-sm text-muted-foreground uppercase tracking-wide">品牌创立</p>
+                </div>
+                <div>
+                  <h4 className="font-heading text-4xl font-bold text-primary mb-2">1800+</h4>
+                  <p className="text-sm text-muted-foreground uppercase tracking-wide">全球门店</p>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-secondary p-8 border-l-4 border-primary">
-              <h3 className="font-heading text-2xl font-bold uppercase mb-4">Our Vision</h3>
-              <p className="text-muted-foreground">
-                To be the world's most loved fruit coffee brand, inspiring a healthier and more vibrant lifestyle for urban youth.
+      {/* Mission & Vision */}
+      <section className="py-20 md:py-32 bg-primary text-primary-foreground">
+        <div className="container">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <div className="space-y-6">
+              <h3 className="font-heading text-3xl font-bold uppercase tracking-wide opacity-80">我们的使命</h3>
+              <p className="text-2xl md:text-4xl font-bold leading-tight">
+                让年轻人随时随地享受一杯好喝不贵的咖啡。
               </p>
             </div>
-            <div className="bg-secondary p-8 border-l-4 border-foreground">
-              <h3 className="font-heading text-2xl font-bold uppercase mb-4">Our Values</h3>
-              <p className="text-muted-foreground">
-                Innovation, Quality, Vitality, and Accessibility. We believe great coffee should be fun and affordable.
+            <div className="space-y-6">
+              <h3 className="font-heading text-3xl font-bold uppercase tracking-wide opacity-80">我们的愿景</h3>
+              <p className="text-2xl md:text-4xl font-bold leading-tight">
+                成为全球年轻人最喜爱的咖啡品牌。
               </p>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="relative h-[400px] overflow-hidden border border-border">
-            <img 
-              src="/images/store-interior.png" 
-              alt="Nowwa Store" 
-              className="absolute inset-0 w-full h-full object-cover"
-            />
+      {/* Awards */}
+      <section className="py-20 md:py-32">
+        <div className="container text-center max-w-4xl mx-auto">
+          <h2 className="font-heading text-4xl font-bold mb-16 tracking-tighter">荣誉与认可</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="p-8 border border-border bg-secondary/20">
+              <div className="h-16 w-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 text-primary font-bold text-2xl">
+                1
+              </div>
+              <h3 className="font-bold text-xl mb-4">IIAC金奖</h3>
+              <p className="text-muted-foreground">连续多年荣获国际咖啡品鉴大赛金奖</p>
+            </div>
+            <div className="p-8 border border-border bg-secondary/20">
+              <div className="h-16 w-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 text-primary font-bold text-2xl">
+                2
+              </div>
+              <h3 className="font-bold text-xl mb-4">中国高增长连锁</h3>
+              <p className="text-muted-foreground">荣获中国餐饮最具商业价值品牌</p>
+            </div>
+            <div className="p-8 border border-border bg-secondary/20">
+              <div className="h-16 w-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 text-primary font-bold text-2xl">
+                3
+              </div>
+              <h3 className="font-bold text-xl mb-4">最受年轻人喜爱</h3>
+              <p className="text-muted-foreground">Z世代首选咖啡品牌TOP3</p>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <div className="text-center pt-8">
-            <h2 className="font-heading text-3xl font-bold uppercase mb-6">Now Arriving in Canada</h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              We are excited to bring the Nowwa experience to Canada. We believe the Canadian market is ready for a coffee revolution.
-            </p>
+      {/* CTA */}
+      <section className="py-20 bg-secondary/30 text-center">
+        <div className="container max-w-2xl">
+          <h2 className="font-heading text-4xl font-bold mb-8 tracking-tighter">加入我们的旅程</h2>
+          <p className="text-xl text-muted-foreground mb-10">
+            无论你是想品尝一杯好咖啡，还是想开启一份新事业，挪瓦咖啡都欢迎你。
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/menu">
+              <Button size="lg" className="rounded-none font-bold uppercase tracking-wide">
+                浏览菜单
+              </Button>
+            </Link>
             <Link href="/franchise">
-              <Button size="lg" className="h-14 px-8 text-lg font-heading font-bold uppercase tracking-wide rounded-none bg-primary hover:bg-primary/90 text-white">
-                Join Our Journey
+              <Button variant="outline" size="lg" className="rounded-none font-bold uppercase tracking-wide">
+                申请加盟
               </Button>
             </Link>
           </div>

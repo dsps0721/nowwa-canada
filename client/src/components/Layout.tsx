@@ -9,11 +9,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Menu", path: "/menu" },
-    { name: "Franchise", path: "/franchise" },
-    { name: "Contact", path: "/contact" },
+    { name: "首页", path: "/" },
+    { name: "关于我们", path: "/about" },
+    { name: "产品菜单", path: "/menu" },
+    { name: "加盟合作", path: "/franchise" },
+    { name: "联系我们", path: "/contact" },
   ];
 
   const isActive = (path: string) => location === path;
@@ -50,7 +50,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             ))}
             <Link href="/franchise">
               <Button className="font-heading uppercase tracking-wide font-bold rounded-none">
-                Join Us
+                立即加盟
               </Button>
             </Link>
           </nav>
@@ -81,7 +81,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     className="w-full font-heading uppercase tracking-wide font-bold rounded-none mt-4"
                     onClick={() => setIsOpen(false)}
                   >
-                    Join Us
+                    立即加盟
                   </Button>
                 </Link>
               </nav>
@@ -108,22 +108,22 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
-              Bringing the vibrant energy of fruit coffee to Canada. Join the revolution of healthy, tasty, and stylish coffee.
+              将充满活力的果咖能量带到加拿大。加入这场健康、美味、时尚的咖啡革命。
             </p>
           </div>
 
           <div>
-            <h4 className="font-heading font-bold text-lg mb-6 text-primary">Explore</h4>
+            <h4 className="font-heading font-bold text-lg mb-6 text-primary">探索</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li><Link href="/"><a className="hover:text-primary transition-colors">Home</a></Link></li>
-              <li><Link href="/about"><a className="hover:text-primary transition-colors">Our Story</a></Link></li>
-              <li><Link href="/menu"><a className="hover:text-primary transition-colors">Menu</a></Link></li>
-              <li><Link href="/franchise"><a className="hover:text-primary transition-colors">Franchise</a></Link></li>
+              <li><Link href="/"><a className="hover:text-primary transition-colors">首页</a></Link></li>
+              <li><Link href="/about"><a className="hover:text-primary transition-colors">品牌故事</a></Link></li>
+              <li><Link href="/menu"><a className="hover:text-primary transition-colors">产品菜单</a></Link></li>
+              <li><Link href="/franchise"><a className="hover:text-primary transition-colors">加盟合作</a></Link></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-heading font-bold text-lg mb-6 text-primary">Contact</h4>
+            <h4 className="font-heading font-bold text-lg mb-6 text-primary">联系方式</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li>Toronto, ON, Canada</li>
               <li>franchise@nowwa.ca</li>
@@ -132,7 +132,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
 
           <div>
-            <h4 className="font-heading font-bold text-lg mb-6 text-primary">Stay Connected</h4>
+            <h4 className="font-heading font-bold text-lg mb-6 text-primary">关注我们</h4>
             <div className="flex gap-4">
               {/* Social Icons Placeholder */}
               <div className="w-10 h-10 bg-white/10 flex items-center justify-center hover:bg-primary transition-colors cursor-pointer">
@@ -151,7 +151,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
         <div className="container mt-16 pt-8 border-t border-white/10 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} Nowwa Coffee Canada. All rights reserved.
+          © {new Date().getFullYear()} 挪瓦咖啡加拿大总代理. 版权所有.
         </div>
       </footer>
     </div>

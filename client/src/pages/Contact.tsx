@@ -6,13 +6,13 @@ import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function Contact() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col min-h-screen">
       {/* Header */}
       <section className="bg-secondary/30 py-20 border-b border-border">
         <div className="container text-center space-y-6">
-          <span className="text-primary font-bold uppercase tracking-wider">Get in Touch</span>
-          <h1 className="font-heading text-5xl md:text-7xl font-bold uppercase tracking-tighter text-foreground">
-            Contact <span className="text-primary">Us</span>
+          <span className="text-primary font-bold uppercase tracking-wider">联系我们</span>
+          <h1 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter text-foreground">
+            保持<span className="text-primary">联络</span>
           </h1>
         </div>
       </section>
@@ -22,9 +22,9 @@ export default function Contact() {
           {/* Contact Info */}
           <div className="space-y-12">
             <div className="space-y-6">
-              <h2 className="font-heading text-3xl font-bold uppercase">Head Office</h2>
+              <h2 className="font-heading text-3xl font-bold">加拿大总部</h2>
               <p className="text-muted-foreground text-lg">
-                Have questions about our menu, locations, or just want to say hi? We'd love to hear from you.
+                无论您是对我们的菜单感兴趣，还是想咨询加盟事宜，我们都期待听到您的声音。
               </p>
             </div>
 
@@ -34,7 +34,7 @@ export default function Contact() {
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="font-heading text-xl font-bold uppercase mb-2">Address</h3>
+                  <h3 className="font-heading text-xl font-bold mb-2">地址</h3>
                   <p className="text-muted-foreground">
                     123 Yonge Street, Suite 456<br/>
                     Toronto, ON M5B 1N8<br/>
@@ -48,10 +48,10 @@ export default function Contact() {
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="font-heading text-xl font-bold uppercase mb-2">Email</h3>
+                  <h3 className="font-heading text-xl font-bold mb-2">电子邮箱</h3>
                   <p className="text-muted-foreground">
-                    General: hello@nowwa.ca<br/>
-                    Franchise: franchise@nowwa.ca
+                    通用咨询: hello@nowwa.ca<br/>
+                    加盟咨询: franchise@nowwa.ca
                   </p>
                 </div>
               </div>
@@ -61,7 +61,7 @@ export default function Contact() {
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
-                  <h3 className="font-heading text-xl font-bold uppercase mb-2">Phone</h3>
+                  <h3 className="font-heading text-xl font-bold mb-2">联系电话</h3>
                   <p className="text-muted-foreground">
                     +1 (647) 123-4567
                   </p>
@@ -72,30 +72,30 @@ export default function Contact() {
 
           {/* Form */}
           <div className="bg-secondary/10 p-8 md:p-10 border border-border">
-            <h2 className="font-heading text-3xl font-bold uppercase mb-6">Send a Message</h2>
+            <h2 className="font-heading text-3xl font-bold mb-6">发送消息</h2>
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div className="space-y-2">
-                <Label htmlFor="name">Name</Label>
-                <Input id="name" placeholder="Your Name" className="rounded-none border-border focus:border-primary bg-background" />
+                <Label htmlFor="name">姓名</Label>
+                <Input id="name" placeholder="您的姓名" className="rounded-none border-border focus:border-primary bg-background" />
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="email">电子邮箱</Label>
                 <Input id="email" type="email" placeholder="your@email.com" className="rounded-none border-border focus:border-primary bg-background" />
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="subject">Subject</Label>
-                <Input id="subject" placeholder="What is this regarding?" className="rounded-none border-border focus:border-primary bg-background" />
+                <Label htmlFor="subject">主题</Label>
+                <Input id="subject" placeholder="您想咨询什么？" className="rounded-none border-border focus:border-primary bg-background" />
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="message">Message</Label>
-                <Textarea id="message" placeholder="Your message..." className="rounded-none border-border focus:border-primary min-h-[150px] bg-background" />
+                <Label htmlFor="message">留言内容</Label>
+                <Textarea id="message" placeholder="请输入您的留言..." className="rounded-none border-border focus:border-primary min-h-[150px] bg-background" />
               </div>
               
               <Button type="submit" className="w-full h-12 font-heading font-bold uppercase tracking-wide rounded-none bg-foreground hover:bg-foreground/90 text-background">
-                Send Message
+                发送消息
               </Button>
             </form>
           </div>
