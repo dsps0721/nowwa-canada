@@ -9,14 +9,14 @@ export default function Home() {
       id: 1,
       name: "吨吨桶·红菜头紫甘蓝美式",
       description: "750ml超大容量，红菜头与紫甘蓝的奇妙碰撞，健康与美味的完美平衡。",
-      image: "/images/product-tonton-c-americano.png",
+      image: "/images/product-tonton-bucket-v2.png",
       tags: ["全网爆款", "750ml"]
     },
     {
       id: 2,
       name: "金杏超模半熟芝士拿铁",
       description: "精选新疆杏和金太阳喜杏，搭配浓郁半熟芝士，口感层次丰富。",
-      image: "/images/product-cheese-latte.png",
+      image: "/images/product-orange-latte-v2.png",
       tags: ["热销TOP1", "芝士控"]
     },
     {
@@ -30,14 +30,14 @@ export default function Home() {
       id: 4,
       name: "元气葡萄气泡果咖",
       description: "NOWWA x 元气森林联名款。浓郁葡萄果香，气泡感十足，唤醒活力。",
-      image: "/images/collab-genki-grape.png",
+      image: "/images/product-orange-fruit-v2.png",
       tags: ["联名限定", "0糖"]
     },
     {
       id: 5,
       name: "吨吨桶·柚C美式",
       description: "满满维C，清爽柚香。超大容量，满足你一整天的咖啡需求。",
-      image: "/images/product-tonton-c-americano.png",
+      image: "/images/product-tonton-bucket-v2.png",
       tags: ["维C满满", "750ml"]
     }
   ];
@@ -80,11 +80,7 @@ export default function Home() {
                   成为合伙人 <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
-              <Link href="/menu">
-                <Button variant="outline" size="lg" className="h-12 px-8 text-base font-heading font-bold uppercase tracking-wide rounded-none border-2 hover:bg-secondary/50 w-full sm:w-auto">
-                  浏览菜单
-                </Button>
-              </Link>
+              
             </div>
           </div>
         </div>
@@ -124,7 +120,7 @@ export default function Home() {
                 <span className="text-xs font-bold tracking-wide uppercase">品牌里程碑</span>
               </div>
               <h2 className="font-heading text-4xl md:text-6xl font-bold tracking-tighter">
-                经典<span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-400">回顾</span>
+                经典<span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-400">联名回顾</span>
               </h2>
             </div>
             <p className="text-xl text-gray-400 max-w-md">
