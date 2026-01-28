@@ -204,11 +204,6 @@ export default function Home() {
               </h2>
             </div>
             <div className="hidden md:block mb-2">
-              <Link href="/menu">
-                <Button variant="link" className="text-lg font-bold uppercase tracking-widest hover:text-primary transition-colors p-0">
-                  {t('products.view_menu')} <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
             </div>
           </div>
           
@@ -221,11 +216,6 @@ export default function Home() {
           </div>
           
           <div className="md:hidden text-center mt-12">
-            <Link href="/menu">
-              <Button size="lg" className="rounded-none font-bold uppercase tracking-wide w-full">
-                {t('products.view_menu')}
-              </Button>
-            </Link>
           </div>
         </div>
       </section>
