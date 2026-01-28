@@ -16,14 +16,14 @@ export default function Home() {
       id: 2,
       name: "香水柠檬美式",
       description: "精选香水柠檬，搭配IIAC金奖咖啡豆，清爽解腻，夏日必备。",
-      image: "/images/product-lemon-americano.png",
+      image: "/images/product-lemon-splash.png",
       tags: ["热销TOP1", "清爽"]
     },
     {
       id: 3,
       name: "0糖生椰拿铁",
       description: "冷榨生椰乳与浓缩咖啡的完美融合，0糖0脂，好喝轻负担。",
-      image: "/images/product-coconut-latte.png",
+      image: "/images/product-coconut-velvet.png",
       tags: ["健康首选", "0糖"]
     },
     {
@@ -37,7 +37,7 @@ export default function Home() {
       id: 5,
       name: "鲜果咖啡系列",
       description: "真水果，真咖啡。每一口都是新鲜，每一杯都是惊喜。",
-      image: "/images/hero-fruit-coffee-v2.png",
+      image: "/images/hero-tonton-store.png",
       tags: ["创新", "果咖"]
     }
   ];
@@ -49,7 +49,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent z-10" />
           <img 
-            src="/images/hero-fruit-coffee-v2.png" 
+            src="/images/hero-tonton-store.png" 
             alt="挪瓦果咖系列" 
             className="w-full h-full object-cover object-center"
           />
