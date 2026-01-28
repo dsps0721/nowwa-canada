@@ -2,9 +2,45 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { CheckCircle2, DollarSign, MapPin, Users } from "lucide-react";
+import { useForm, ValidationError } from '@formspree/react';
 
 export default function Franchise() {
+  const [state, handleSubmit] = useForm(import.meta.env.VITE_FORMSPREE_ID || "YOUR_FORM_ID");
+
+  if (state.succeeded) {
+    return (
+      <div className="flex flex-col min-h-screen">
+        <section className="bg-secondary/30 py-20 border-b border-border">
+          <div className="container text-center space-y-6">
+            <span className="text-primary font-bold uppercase tracking-wider">成为合伙人</span>
+            <h1 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter text-foreground">
+              加入<span className="text-primary">橙色风暴</span>
+            </h1>
+          </div>
+        </section>
+        <div className="flex-1 flex items-center justify-center bg-background p-8">
+          <div className="max-w-md text-center space-y-4 p-8 border border-border bg-card shadow-xl">
+            <div className="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              </svg>
+            </div>
+            <h2 className="text-2xl font-bold font-heading">申请已提交！</h2>
+            <p className="text-muted-foreground">
+              感谢您对挪瓦咖啡的兴趣。我们的招商团队已收到您的申请，将尽快与您联系。
+            </p>
+            <Button 
+              className="mt-6 w-full font-heading font-bold uppercase tracking-wide rounded-none"
+              onClick={() => window.location.reload()}
+            >
+              返回页面
+            </Button>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
@@ -20,8 +56,6 @@ export default function Franchise() {
           </p>
         </div>
       </section>
-
-
 
       {/* Process & Form */}
       <section className="py-24 bg-secondary/30 border-t border-border">
@@ -66,40 +100,46 @@ export default function Franchise() {
           {/* Application Form */}
           <div className="bg-background p-8 md:p-10 border border-border shadow-xl">
             <h2 className="font-heading text-3xl font-bold mb-6">立即申请</h2>
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <Label htmlFor="firstName">名</Label>
-                  <Input id="firstName" placeholder="San" className="rounded-none border-border focus:border-primary" />
+                  <Input id="firstName" name="firstName" placeholder="San" className="rounded-none border-border focus:border-primary" required />
+                  <ValidationError prefix="First Name" field="firstName" errors={state.errors} />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="lastName">姓</Label>
-                  <Input id="lastName" placeholder="Zhang" className="rounded-none border-border focus:border-primary" />
+                  <Input id="lastName" name="lastName" placeholder="Zhang" className="rounded-none border-border focus:border-primary" required />
+                  <ValidationError prefix="Last Name" field="lastName" errors={state.errors} />
                 </div>
               </div>
               
               <div className="space-y-2">
                 <Label htmlFor="email">电子邮箱</Label>
-                <Input id="email" type="email" placeholder="zhangsan@example.com" className="rounded-none border-border focus:border-primary" />
+                <Input id="email" type="email" name="email" placeholder="zhangsan@example.com" className="rounded-none border-border focus:border-primary" required />
+                <ValidationError prefix="Email" field="email" errors={state.errors} />
               </div>
               
               <div className="space-y-2">
                 <Label htmlFor="phone">联系电话</Label>
-                <Input id="phone" type="tel" placeholder="+1 (555) 000-0000" className="rounded-none border-border focus:border-primary" />
+                <Input id="phone" type="tel" name="phone" placeholder="+1 (555) 000-0000" className="rounded-none border-border focus:border-primary" required />
+                <ValidationError prefix="Phone" field="phone" errors={state.errors} />
               </div>
               
               <div className="space-y-2">
                 <Label htmlFor="city">意向城市</Label>
-                <Input id="city" placeholder="例如：多伦多, 温哥华" className="rounded-none border-border focus:border-primary" />
+                <Input id="city" name="city" placeholder="例如：多伦多, 温哥华" className="rounded-none border-border focus:border-primary" required />
+                <ValidationError prefix="City" field="city" errors={state.errors} />
               </div>
               
               <div className="space-y-2">
                 <Label htmlFor="experience">相关经验</Label>
-                <Textarea id="experience" placeholder="请简要描述您的商业背景或餐饮行业经验..." className="rounded-none border-border focus:border-primary min-h-[100px]" />
+                <Textarea id="experience" name="experience" placeholder="请简要描述您的商业背景或餐饮行业经验..." className="rounded-none border-border focus:border-primary min-h-[100px]" />
+                <ValidationError prefix="Experience" field="experience" errors={state.errors} />
               </div>
               
-              <Button type="submit" className="w-full h-12 font-heading font-bold uppercase tracking-wide rounded-none bg-primary hover:bg-primary/90 text-white">
-                提交申请
+              <Button type="submit" disabled={state.submitting} className="w-full h-12 font-heading font-bold uppercase tracking-wide rounded-none bg-primary hover:bg-primary/90 text-white">
+                {state.submitting ? "提交中..." : "提交申请"}
               </Button>
               
               <p className="text-xs text-muted-foreground text-center">
