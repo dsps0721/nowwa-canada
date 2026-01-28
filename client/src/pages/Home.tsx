@@ -9,7 +9,7 @@ export default function Home() {
       id: 1,
       name: "吨吨桶·红菜头紫甘蓝美式",
       description: "750ml超大容量，红菜头与紫甘蓝的奇妙碰撞，健康与美味的完美平衡。",
-      image: "/images/product-tonton-bucket-v2.png",
+      image: "/images/product-tonton-real.jpg",
       tags: ["全网爆款", "750ml"]
     },
     {
@@ -37,7 +37,7 @@ export default function Home() {
       id: 5,
       name: "吨吨桶·柚C美式",
       description: "满满维C，清爽柚香。超大容量，满足你一整天的咖啡需求。",
-      image: "/images/product-tonton-bucket-v2.png",
+      image: "/images/product-tonton-real.jpg",
       tags: ["维C满满", "750ml"]
     }
   ];
