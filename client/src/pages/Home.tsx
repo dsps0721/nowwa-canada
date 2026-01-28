@@ -1,16 +1,55 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { ArrowRight, Star, TrendingUp, Users, Leaf } from "lucide-react";
+import { ArrowRight, TrendingUp, Users, Leaf } from "lucide-react";
+import { ProductCarousel } from "@/components/ProductCarousel";
 
 export default function Home() {
+  const featuredProducts = [
+    {
+      id: 1,
+      name: "超大桶美式",
+      description: "750ml超大容量，唤醒一整天的活力。独特的把手设计，时尚便携。",
+      image: "/images/ton-ton-bucket.png",
+      tags: ["全网爆款", "750ml"]
+    },
+    {
+      id: 2,
+      name: "香水柠檬美式",
+      description: "精选香水柠檬，搭配IIAC金奖咖啡豆，清爽解腻，夏日必备。",
+      image: "/images/product-lemon-americano.png",
+      tags: ["热销TOP1", "清爽"]
+    },
+    {
+      id: 3,
+      name: "0糖生椰拿铁",
+      description: "冷榨生椰乳与浓缩咖啡的完美融合，0糖0脂，好喝轻负担。",
+      image: "/images/product-coconut-latte.png",
+      tags: ["健康首选", "0糖"]
+    },
+    {
+      id: 4,
+      name: "超大桶拿铁",
+      description: "750ml超大容量，奶香浓郁，快乐加倍。满足你的咖啡瘾。",
+      image: "/images/ton-ton-bucket.png",
+      tags: ["超值", "750ml"]
+    },
+    {
+      id: 5,
+      name: "鲜果咖啡系列",
+      description: "真水果，真咖啡。每一口都是新鲜，每一杯都是惊喜。",
+      image: "/images/hero-fruit-coffee-v2.png",
+      tags: ["创新", "果咖"]
+    }
+  ];
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
       <section className="relative h-[90vh] flex items-center overflow-hidden bg-background">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent z-10" />
           <img 
-            src="/images/hero-fruit-coffee.png" 
+            src="/images/hero-fruit-coffee-v2.png" 
             alt="挪瓦果咖系列" 
             className="w-full h-full object-cover object-center"
           />
@@ -26,12 +65,12 @@ export default function Home() {
               <span className="text-sm font-bold tracking-wide uppercase">现已登陆加拿大</span>
             </div>
             
-            <h1 className="font-heading text-6xl md:text-8xl font-bold leading-[0.9] tracking-tighter text-foreground">
+            <h1 className="font-heading text-6xl md:text-8xl font-bold leading-[0.9] tracking-tighter text-foreground drop-shadow-sm">
               果咖<br />
               <span className="text-primary">新革命</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-lg leading-relaxed">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-lg leading-relaxed font-medium">
               全球1800+门店的共同选择。低卡、健康、好喝，重新定义你的咖啡体验。
             </p>
             
@@ -42,7 +81,7 @@ export default function Home() {
                 </Button>
               </Link>
               <Link href="/menu">
-                <Button variant="outline" size="lg" className="h-14 px-8 text-lg font-heading font-bold uppercase tracking-wide rounded-none border-2 hover:bg-secondary/50">
+                <Button variant="outline" size="lg" className="h-14 px-8 text-lg font-heading font-bold uppercase tracking-wide rounded-none border-2 hover:bg-secondary/50 bg-background/50 backdrop-blur-sm">
                   浏览菜单
                 </Button>
               </Link>
@@ -75,109 +114,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Products - Ton Ton Bucket Highlight */}
+      {/* Featured Products Carousel */}
       <section className="py-32 bg-secondary/30">
         <div className="container">
-          <div className="flex flex-col md:flex-row items-center gap-16">
-            <div className="flex-1 relative group">
-              <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl transform group-hover:scale-110 transition-transform duration-700" />
-              <img 
-                src="/images/ton-ton-bucket.png" 
-                alt="挪瓦吨吨桶" 
-                className="relative z-10 w-full max-w-md mx-auto drop-shadow-2xl transform group-hover:-translate-y-4 transition-transform duration-500"
-              />
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="inline-block px-4 py-1 bg-primary text-primary-foreground text-sm font-bold uppercase tracking-widest mb-4">
+              全网爆款
             </div>
-            <div className="flex-1 space-y-8">
-              <div className="inline-block px-4 py-1 bg-primary text-primary-foreground text-sm font-bold uppercase tracking-widest mb-4">
-                全网爆款
-              </div>
-              <h2 className="font-heading text-5xl md:text-6xl font-bold tracking-tighter">
-                超大容量<br /><span className="text-primary">吨吨桶</span>
-              </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                750ml超大容量，满足你一整天的咖啡需求。独特的把手设计，时尚便携，出街必备。不仅是咖啡，更是年轻人的社交货币。
-              </p>
-              <ul className="space-y-4">
-                <li className="flex items-center gap-3 text-lg font-medium">
-                  <div className="h-2 w-2 bg-primary rounded-full" />
-                  750ml 超大满足
-                </li>
-                <li className="flex items-center gap-3 text-lg font-medium">
-                  <div className="h-2 w-2 bg-primary rounded-full" />
-                  便携提手设计
-                </li>
-                <li className="flex items-center gap-3 text-lg font-medium">
-                  <div className="h-2 w-2 bg-primary rounded-full" />
-                  0糖0脂健康选择
-                </li>
-              </ul>
-              <Link href="/menu">
-                <Button size="lg" className="mt-8 rounded-none font-bold uppercase tracking-wide">
-                  查看更多产品
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Product Showcase */}
-      <section className="py-32 bg-background">
-        <div className="container">
-          <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="font-heading text-4xl md:text-5xl font-bold mb-6 tracking-tighter">
-              不仅是咖啡，更是<span className="text-primary">生活方式</span>
+            <h2 className="font-heading text-4xl md:text-5xl font-bold tracking-tighter mb-6">
+              大家都在喝的<span className="text-primary">人气单品</span>
             </h2>
             <p className="text-xl text-muted-foreground">
-              我们将新鲜水果与精品咖啡完美融合，创造出前所未有的味觉体验。
+              从超大容量的吨吨桶到清爽解腻的果咖，总有一款适合你。
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Product 1 */}
-            <div className="group relative overflow-hidden bg-secondary/20 aspect-[4/5]">
-              <img 
-                src="/images/fruit-coffee-series.png" 
-                alt="果咖系列" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                <h3 className="text-white font-heading text-2xl font-bold mb-2">鲜果咖啡系列</h3>
-                <p className="text-white/80">真水果，真咖啡，每一口都是新鲜。</p>
-              </div>
-            </div>
-
-            {/* Product 2 */}
-            <div className="group relative overflow-hidden bg-secondary/20 aspect-[4/5]">
-              <img 
-                src="/images/zero-sugar-latte.png" 
-                alt="0糖拿铁" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                <h3 className="text-white font-heading text-2xl font-bold mb-2">0糖拿铁系列</h3>
-                <p className="text-white/80">好喝轻负担，健康生活新选择。</p>
-              </div>
-            </div>
-
-            {/* Product 3 */}
-            <div className="group relative overflow-hidden bg-secondary/20 aspect-[4/5]">
-              <img 
-                src="/images/product-collection.png" 
-                alt="经典系列" 
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                <h3 className="text-white font-heading text-2xl font-bold mb-2">经典大师系列</h3>
-                <p className="text-white/80">IIAC金奖豆，还原咖啡本真风味。</p>
-              </div>
-            </div>
+          
+          <ProductCarousel products={featuredProducts} />
+          
+          <div className="text-center mt-12">
+            <Link href="/menu">
+              <Button size="lg" className="rounded-none font-bold uppercase tracking-wide">
+                查看完整菜单
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-32 bg-secondary/30">
+      <section className="py-32 bg-background">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div className="space-y-12">
