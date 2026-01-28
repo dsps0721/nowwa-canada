@@ -6,7 +6,7 @@ import { useForm, ValidationError } from '@formspree/react';
 import { useI18n } from "@/contexts/I18nContext";
 
 export default function Franchise() {
-  const { t } = useI18n();
+  const { t, language } = useI18n();
   const [state, handleSubmit] = useForm(import.meta.env.VITE_FORMSPREE_ID || "YOUR_FORM_ID");
 
   if (state.succeeded) {
@@ -103,16 +103,33 @@ export default function Franchise() {
             <h2 className="font-heading text-3xl font-bold mb-6">{t('franchise.form.title')}</h2>
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <Label htmlFor="firstName">{t('franchise.form.name')}</Label>
-                  <Input id="firstName" name="firstName" placeholder="First Name" className="rounded-none border-border focus:border-primary" required />
-                  <ValidationError prefix="First Name" field="firstName" errors={state.errors} />
-                </div>
-                <div className="space-y-2">
-                  <Label htmlFor="lastName">Last Name</Label>
-                  <Input id="lastName" name="lastName" placeholder="Last Name" className="rounded-none border-border focus:border-primary" required />
-                  <ValidationError prefix="Last Name" field="lastName" errors={state.errors} />
-                </div>
+                {language === 'zh' ? (
+                  <>
+                    <div className="space-y-2">
+                      <Label htmlFor="lastName">{t('franchise.form.lastName')}</Label>
+                      <Input id="lastName" name="lastName" placeholder={t('franchise.form.lastName')} className="rounded-none border-border focus:border-primary" required />
+                      <ValidationError prefix="Last Name" field="lastName" errors={state.errors} />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="firstName">{t('franchise.form.firstName')}</Label>
+                      <Input id="firstName" name="firstName" placeholder={t('franchise.form.firstName')} className="rounded-none border-border focus:border-primary" required />
+                      <ValidationError prefix="First Name" field="firstName" errors={state.errors} />
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="space-y-2">
+                      <Label htmlFor="firstName">{t('franchise.form.firstName')}</Label>
+                      <Input id="firstName" name="firstName" placeholder={t('franchise.form.firstName')} className="rounded-none border-border focus:border-primary" required />
+                      <ValidationError prefix="First Name" field="firstName" errors={state.errors} />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="lastName">{t('franchise.form.lastName')}</Label>
+                      <Input id="lastName" name="lastName" placeholder={t('franchise.form.lastName')} className="rounded-none border-border focus:border-primary" required />
+                      <ValidationError prefix="Last Name" field="lastName" errors={state.errors} />
+                    </div>
+                  </>
+                )}
               </div>
               
               <div className="space-y-2">
