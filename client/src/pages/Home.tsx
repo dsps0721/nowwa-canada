@@ -121,14 +121,14 @@ export default function Home() {
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 rounded-full bg-white/10 text-white border border-white/20">
                 <Sparkles className="w-4 h-4 text-yellow-400" />
-                <span className="text-xs font-bold tracking-wide uppercase">强强联手</span>
+                <span className="text-xs font-bold tracking-wide uppercase">品牌里程碑</span>
               </div>
               <h2 className="font-heading text-4xl md:text-6xl font-bold tracking-tighter">
-                跨界<span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-400">联名</span>
+                经典<span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-400">回顾</span>
               </h2>
             </div>
             <p className="text-xl text-gray-400 max-w-md">
-              我们与全球顶尖品牌合作，不断探索咖啡的无限可能，为年轻人带来更多惊喜。
+              回顾我们与全球顶尖品牌的精彩合作，见证挪瓦咖啡的无限创意与活力。
             </p>
           </div>
 
@@ -145,14 +145,14 @@ export default function Home() {
                 </div>
                 <h3 className="text-4xl font-heading font-bold mb-4 leading-tight">
                   元气果咖系列<br />
-                  <span className="text-primary">0糖0脂0卡</span>
+                  <span className="text-primary">2023 夏日限定</span>
                 </h3>
                 <p className="text-gray-300 mb-8 max-w-sm">
-                  当挪瓦咖啡遇上元气森林，气泡与咖啡的奇妙碰撞。白桃、葡萄双重口味，夏日解暑必备。
+                  当挪瓦咖啡遇上元气森林，气泡与咖啡的奇妙碰撞。曾创下全网刷屏的夏日解暑神话。
                 </p>
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-none uppercase tracking-widest">
-                  探索联名款
-                </Button>
+                <div className="inline-block px-4 py-2 border border-white/30 text-white/70 text-sm uppercase tracking-widest">
+                  经典案例 Archive
+                </div>
               </div>
             </div>
 
@@ -162,7 +162,7 @@ export default function Home() {
                 <div className="relative z-10">
                   <h3 className="text-2xl font-heading font-bold mb-2">喜羊羊与灰太狼</h3>
                   <p className="text-gray-400 text-sm mb-4">童年回忆杀，樱花季限定</p>
-                  <span className="text-xs font-bold uppercase tracking-widest text-primary">Coming Soon</span>
+                  <span className="text-xs font-bold uppercase tracking-widest text-gray-500">2024 春季限定</span>
                 </div>
                 <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-l from-pink-500/20 to-transparent" />
               </div>
@@ -171,8 +171,8 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent" />
                 <div className="relative z-10 p-8 h-full flex flex-col justify-center">
                   <h3 className="text-3xl font-heading font-bold mb-2 text-white">七喜 7-UP</h3>
-                  <p className="text-gray-200 text-sm mb-4 max-w-[200px]">清爽柠檬，透心凉。联名主题店限时登陆。</p>
-                  <span className="inline-block px-3 py-1 bg-[#009B4C] text-white text-xs font-bold uppercase tracking-widest w-fit">已上线</span>
+                  <p className="text-gray-200 text-sm mb-4 max-w-[200px]">清爽柠檬，透心凉。七喜联名主题店精彩瞬间。</p>
+                  <span className="inline-block px-3 py-1 bg-zinc-700 text-white/80 text-xs font-bold uppercase tracking-widest w-fit">主题店回顾</span>
                 </div>
               </div>
             </div>
