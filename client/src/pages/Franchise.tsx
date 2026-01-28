@@ -3,8 +3,10 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { useForm, ValidationError } from '@formspree/react';
+import { useI18n } from "@/contexts/I18nContext";
 
 export default function Franchise() {
+  const { t } = useI18n();
   const [state, handleSubmit] = useForm(import.meta.env.VITE_FORMSPREE_ID || "YOUR_FORM_ID");
 
   if (state.succeeded) {
@@ -12,9 +14,9 @@ export default function Franchise() {
       <div className="flex flex-col min-h-screen">
         <section className="bg-secondary/30 py-20 border-b border-border">
           <div className="container text-center space-y-6">
-            <span className="text-primary font-bold uppercase tracking-wider">成为合伙人</span>
+            <span className="text-primary font-bold uppercase tracking-wider">{t('nav.join')}</span>
             <h1 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter text-foreground">
-              加入<span className="text-primary">橙色风暴</span>
+              {t('franchise.title')}
             </h1>
           </div>
         </section>
@@ -25,15 +27,15 @@ export default function Franchise() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h2 className="text-2xl font-bold font-heading">申请已提交！</h2>
+            <h2 className="text-2xl font-bold font-heading">{t('franchise.form.success.title')}</h2>
             <p className="text-muted-foreground">
-              感谢您对挪瓦咖啡的兴趣。我们的招商团队已收到您的申请，将尽快与您联系。
+              {t('franchise.form.success.desc')}
             </p>
             <Button 
               className="mt-6 w-full font-heading font-bold uppercase tracking-wide rounded-none"
               onClick={() => window.location.reload()}
             >
-              返回页面
+              Back
             </Button>
           </div>
         </div>
@@ -46,13 +48,12 @@ export default function Franchise() {
       {/* Header */}
       <section className="bg-secondary/30 py-20 border-b border-border">
         <div className="container text-center space-y-6">
-          <span className="text-primary font-bold uppercase tracking-wider">成为合伙人</span>
+          <span className="text-primary font-bold uppercase tracking-wider">{t('nav.join')}</span>
           <h1 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter text-foreground">
-            加入<span className="text-primary">橙色风暴</span>
+            {t('franchise.title')}
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            寻找充满激情的合作伙伴，共同开拓加拿大市场。
-            成熟的商业模式，强大的品牌支持，巨大的市场潜力。
+            {t('franchise.subtitle')}
           </p>
         </div>
       </section>
@@ -62,89 +63,85 @@ export default function Franchise() {
         <div className="container grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Process Steps */}
           <div className="space-y-12">
-            <h2 className="font-heading text-4xl font-bold mb-8">加盟流程</h2>
+            <h2 className="font-heading text-4xl font-bold mb-8">Process</h2>
             
             <div className="relative border-l-2 border-border pl-8 space-y-12 ml-4">
               <div className="relative">
                 <span className="absolute -left-[41px] top-0 w-5 h-5 rounded-full bg-primary border-4 border-background"></span>
-                <h3 className="font-heading text-xl font-bold mb-2">01. 提交申请</h3>
-                <p className="text-muted-foreground">填写右侧表格，提交您的加盟意向。</p>
+                <h3 className="font-heading text-xl font-bold mb-2">01. {t('franchise.form.submit')}</h3>
+                <p className="text-muted-foreground">Fill out the form to submit your interest.</p>
               </div>
               
               <div className="relative">
                 <span className="absolute -left-[41px] top-0 w-5 h-5 rounded-full bg-border border-4 border-background"></span>
-                <h3 className="font-heading text-xl font-bold mb-2">02. 初步审核</h3>
-                <p className="text-muted-foreground">我们的团队将审核您的资料，并与您联系进行初步沟通。</p>
+                <h3 className="font-heading text-xl font-bold mb-2">02. Review</h3>
+                <p className="text-muted-foreground">Our team will review your application and contact you.</p>
               </div>
               
               <div className="relative">
                 <span className="absolute -left-[41px] top-0 w-5 h-5 rounded-full bg-border border-4 border-background"></span>
-                <h3 className="font-heading text-xl font-bold mb-2">03. 面谈考察</h3>
-                <p className="text-muted-foreground">受邀参加品牌说明会，品尝产品，深入了解合作细节及FDD文件。</p>
+                <h3 className="font-heading text-xl font-bold mb-2">03. Meeting</h3>
+                <p className="text-muted-foreground">Join our brand presentation and taste our products.</p>
               </div>
               
               <div className="relative">
                 <span className="absolute -left-[41px] top-0 w-5 h-5 rounded-full bg-border border-4 border-background"></span>
-                <h3 className="font-heading text-xl font-bold mb-2">04. 选址签约</h3>
-                <p className="text-muted-foreground">确定合作意向，签署协议，开启您的创业之旅。</p>
+                <h3 className="font-heading text-xl font-bold mb-2">04. Signing</h3>
+                <p className="text-muted-foreground">Sign the agreement and start your journey.</p>
               </div>
               
               <div className="relative">
                 <span className="absolute -left-[41px] top-0 w-5 h-5 rounded-full bg-border border-4 border-background"></span>
-                <h3 className="font-heading text-xl font-bold mb-2">05. 开业筹备</h3>
-                <p className="text-muted-foreground">完成开业前的各项准备工作，迎接盛大开业。</p>
+                <h3 className="font-heading text-xl font-bold mb-2">05. Opening</h3>
+                <p className="text-muted-foreground">Prepare for the grand opening.</p>
               </div>
             </div>
           </div>
 
           {/* Application Form */}
           <div className="bg-background p-8 md:p-10 border border-border shadow-xl">
-            <h2 className="font-heading text-3xl font-bold mb-6">立即申请</h2>
+            <h2 className="font-heading text-3xl font-bold mb-6">{t('franchise.form.title')}</h2>
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="firstName">名</Label>
-                  <Input id="firstName" name="firstName" placeholder="San" className="rounded-none border-border focus:border-primary" required />
+                  <Label htmlFor="firstName">{t('franchise.form.name')}</Label>
+                  <Input id="firstName" name="firstName" placeholder="First Name" className="rounded-none border-border focus:border-primary" required />
                   <ValidationError prefix="First Name" field="firstName" errors={state.errors} />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="lastName">姓</Label>
-                  <Input id="lastName" name="lastName" placeholder="Zhang" className="rounded-none border-border focus:border-primary" required />
+                  <Label htmlFor="lastName">Last Name</Label>
+                  <Input id="lastName" name="lastName" placeholder="Last Name" className="rounded-none border-border focus:border-primary" required />
                   <ValidationError prefix="Last Name" field="lastName" errors={state.errors} />
                 </div>
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="email">电子邮箱</Label>
-                <Input id="email" type="email" name="email" placeholder="zhangsan@example.com" className="rounded-none border-border focus:border-primary" required />
+                <Label htmlFor="email">{t('franchise.form.email')}</Label>
+                <Input id="email" type="email" name="email" placeholder="email@example.com" className="rounded-none border-border focus:border-primary" required />
                 <ValidationError prefix="Email" field="email" errors={state.errors} />
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="phone">联系电话</Label>
+                <Label htmlFor="phone">{t('franchise.form.phone')}</Label>
                 <Input id="phone" type="tel" name="phone" placeholder="+1 (555) 000-0000" className="rounded-none border-border focus:border-primary" required />
                 <ValidationError prefix="Phone" field="phone" errors={state.errors} />
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="city">意向城市</Label>
-                <Input id="city" name="city" placeholder="例如：多伦多, 温哥华" className="rounded-none border-border focus:border-primary" required />
+                <Label htmlFor="city">{t('franchise.form.city')}</Label>
+                <Input id="city" name="city" placeholder="Toronto, Vancouver" className="rounded-none border-border focus:border-primary" required />
                 <ValidationError prefix="City" field="city" errors={state.errors} />
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="experience">相关经验</Label>
-                <Textarea id="experience" name="experience" placeholder="请简要描述您的商业背景或餐饮行业经验..." className="rounded-none border-border focus:border-primary min-h-[100px]" />
+                <Label htmlFor="experience">{t('franchise.form.experience')}</Label>
+                <Textarea id="experience" name="experience" placeholder="..." className="rounded-none border-border focus:border-primary min-h-[100px]" />
                 <ValidationError prefix="Experience" field="experience" errors={state.errors} />
               </div>
               
               <Button type="submit" disabled={state.submitting} className="w-full h-12 font-heading font-bold uppercase tracking-wide rounded-none bg-primary hover:bg-primary/90 text-white">
-                {state.submitting ? "提交中..." : "提交申请"}
+                {state.submitting ? t('franchise.form.submitting') : t('franchise.form.submit')}
               </Button>
-              
-              <p className="text-xs text-muted-foreground text-center">
-                提交表格即表示您同意挪瓦咖啡加拿大团队与您联系。
-              </p>
             </form>
           </div>
         </div>

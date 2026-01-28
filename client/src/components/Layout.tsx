@@ -3,16 +3,18 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import { useI18n } from "@/contexts/I18nContext";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [location] = useLocation();
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useI18n();
 
   const navItems = [
-    { name: "首页", path: "/" },
-    { name: "关于我们", path: "/about" },
-
-    { name: "加盟合作", path: "/franchise" },
+    { name: t('nav.home'), path: "/" },
+    { name: t('nav.about'), path: "/about" },
+    { name: t('nav.franchise'), path: "/franchise" },
   ];
 
   const isActive = (path: string) => location === path;
@@ -42,9 +44,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </a>
               </Link>
             ))}
+            <LanguageSwitcher />
             <Link href="/franchise">
               <Button className="font-heading uppercase tracking-wide font-bold rounded-none">
-                立即加盟
+                {t('nav.join')}
               </Button>
             </Link>
           </nav>
@@ -70,12 +73,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     </a>
                   </Link>
                 ))}
+                <div className="flex justify-center">
+                  <LanguageSwitcher />
+                </div>
                 <Link href="/franchise">
                   <Button 
                     className="w-full font-heading uppercase tracking-wide font-bold rounded-none mt-4"
                     onClick={() => setIsOpen(false)}
                   >
-                    立即加盟
+                    {t('nav.join')}
                   </Button>
                 </Link>
               </nav>
@@ -97,36 +103,35 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <img src="/images/logo.png" alt="Nowwa Coffee" className="h-8 w-auto brightness-0 invert" />
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
-              将充满活力的果咖能量带到加拿大。加入这场健康、美味、时尚的咖啡革命。
+              {t('footer.desc')}
             </p>
           </div>
 
           <div>
-            <h4 className="font-heading font-bold text-lg mb-6 text-primary">探索</h4>
+            <h4 className="font-heading font-bold text-lg mb-6 text-primary">{t('footer.explore')}</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li><Link href="/"><a className="hover:text-primary transition-colors">首页</a></Link></li>
-              <li><Link href="/about"><a className="hover:text-primary transition-colors">品牌故事</a></Link></li>
-
-              <li><Link href="/franchise"><a className="hover:text-primary transition-colors">加盟合作</a></Link></li>
+              <li><Link href="/"><a className="hover:text-primary transition-colors">{t('nav.home')}</a></Link></li>
+              <li><Link href="/about"><a className="hover:text-primary transition-colors">{t('nav.about')}</a></Link></li>
+              <li><Link href="/franchise"><a className="hover:text-primary transition-colors">{t('nav.franchise')}</a></Link></li>
             </ul>
           </div>
 
           <div className="md:col-span-2 flex justify-start md:justify-end">
             <div className="flex flex-col items-center md:items-end">
-              <h4 className="font-heading font-bold text-lg mb-4 text-primary">联系招商经理</h4>
+              <h4 className="font-heading font-bold text-lg mb-4 text-primary">{t('footer.contact')}</h4>
               <div className="bg-white p-2 rounded-lg">
                 <img 
                   src="/images/contact-qr.png" 
-                  alt="联系招商经理" 
+                  alt="Contact Manager" 
                   className="w-32 h-32 object-contain"
                 />
               </div>
-              <p className="text-xs text-muted-foreground mt-2">扫码咨询加盟详情</p>
+              <p className="text-xs text-muted-foreground mt-2">{t('footer.scan')}</p>
             </div>
           </div>
         </div>
         <div className="container mt-16 pt-8 border-t border-white/10 text-center text-xs text-muted-foreground">
-          © {new Date().getFullYear()} 挪瓦咖啡加拿大总代理. 版权所有.
+          {t('footer.copyright')}
         </div>
       </footer>
     </div>
