@@ -78,35 +78,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Awards */}
-      <section className="py-20 md:py-32">
-        <div className="container text-center max-w-4xl mx-auto">
-          <h2 className="font-heading text-4xl font-bold mb-16 tracking-tighter">荣誉与认可</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-8 border border-border bg-secondary/20">
-              <div className="h-16 w-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 text-primary font-bold text-2xl">
-                1
-              </div>
-              <h3 className="font-bold text-xl mb-4">IIAC金奖</h3>
-              <p className="text-muted-foreground">连续多年荣获国际咖啡品鉴大赛金奖</p>
-            </div>
-            <div className="p-8 border border-border bg-secondary/20">
-              <div className="h-16 w-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 text-primary font-bold text-2xl">
-                2
-              </div>
-              <h3 className="font-bold text-xl mb-4">中国高增长连锁</h3>
-              <p className="text-muted-foreground">荣获中国餐饮最具商业价值品牌</p>
-            </div>
-            <div className="p-8 border border-border bg-secondary/20">
-              <div className="h-16 w-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6 text-primary font-bold text-2xl">
-                3
-              </div>
-              <h3 className="font-bold text-xl mb-4">最受年轻人喜爱</h3>
-              <p className="text-muted-foreground">Z世代首选咖啡品牌TOP3</p>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* CTA */}
       <section className="py-20 bg-secondary/30 text-center">
@@ -116,11 +88,6 @@ export default function About() {
             无论你是想品尝一杯好咖啡，还是想开启一份新事业，挪瓦咖啡都欢迎你。
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/menu">
-              <Button size="lg" className="rounded-none font-bold uppercase tracking-wide">
-                浏览菜单
-              </Button>
-            </Link>
             <Link href="/franchise">
               <Button variant="outline" size="lg" className="rounded-none font-bold uppercase tracking-wide">
                 申请加盟
