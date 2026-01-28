@@ -158,13 +158,14 @@ export default function Home() {
 
             {/* Other Collabs Placeholder */}
             <div className="grid grid-rows-2 gap-8">
-              <div className="group relative overflow-hidden bg-zinc-900 border border-zinc-800 p-8 flex items-center justify-between">
-                <div className="relative z-10">
-                  <h3 className="text-2xl font-heading font-bold mb-2">喜羊羊与灰太狼</h3>
-                  <p className="text-gray-400 text-sm mb-4">童年回忆杀，樱花季限定</p>
-                  <span className="text-xs font-bold uppercase tracking-widest text-gray-500">2024 春季限定</span>
+              <div className="group relative overflow-hidden bg-zinc-900 border border-zinc-800 h-full min-h-[240px]">
+                <div className="absolute inset-0 bg-[url('/images/collab-mlp.jpg')] bg-cover bg-center opacity-80 group-hover:scale-105 transition-transform duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/40 to-transparent" />
+                <div className="relative z-10 p-8 h-full flex flex-col justify-center">
+                  <h3 className="text-3xl font-heading font-bold mb-2 text-white">小马宝莉 My Little Pony</h3>
+                  <p className="text-gray-200 text-sm mb-4 max-w-[200px]">全球 IP 梦幻联动，魔法与果咖的奇妙相遇。</p>
+                  <span className="inline-block px-3 py-1 bg-pink-600 text-white text-xs font-bold uppercase tracking-widest w-fit">2024 联名回顾</span>
                 </div>
-                <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-l from-pink-500/20 to-transparent" />
               </div>
               <div className="group relative overflow-hidden bg-zinc-900 border border-zinc-800 h-full min-h-[240px]">
                 <div className="absolute inset-0 bg-[url('/images/collab-7up-store.jpg')] bg-cover bg-center opacity-80 group-hover:scale-105 transition-transform duration-700" />
