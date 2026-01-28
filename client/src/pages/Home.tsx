@@ -351,13 +351,11 @@ export default function Home() {
               "/images/popular-store-8.webp",
               "/images/popular-store-9.webp",
               "/images/popular-store-10.webp",
-              "/images/popular-store-1.webp", // Duplicate for seamless loop
-              "/images/popular-store-3.webp",
-              "/images/popular-store-4.webp",
-              "/images/popular-store-7.webp",
-              "/images/popular-store-8.webp",
-              "/images/popular-store-9.webp",
-              "/images/popular-store-10.webp"
+              "/images/popular-store-new-1.jpg",
+              "/images/popular-store-new-2.jpg",
+              "/images/popular-store-new-3.png",
+              "/images/popular-store-new-4.jpg",
+              "/images/popular-store-new-5.jpg"
             ]
             .sort(() => Math.random() - 0.5) // Randomize order
             .map((src, i) => (
