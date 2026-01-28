@@ -334,6 +334,64 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Popular Stores Carousel Section */}
+      <section className="py-20 bg-gray-50 overflow-hidden">
+        <div className="container mb-12 text-center">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">人气门店</h2>
+          <p className="text-muted-foreground">遍布全球的火爆现场，见证挪瓦咖啡的品牌力量</p>
+        </div>
+        
+        <div className="relative w-full">
+          <div className="flex gap-6 animate-scroll hover:pause-scroll w-max px-4">
+            {[
+              "/images/popular-store-1.webp",
+              "/images/popular-store-3.webp",
+              "/images/popular-store-4.webp",
+              "/images/popular-store-7.webp",
+              "/images/popular-store-8.webp",
+              "/images/popular-store-9.webp",
+              "/images/popular-store-10.webp",
+              "/images/popular-store-1.webp", // Duplicate for seamless loop
+              "/images/popular-store-3.webp",
+              "/images/popular-store-4.webp",
+              "/images/popular-store-7.webp",
+              "/images/popular-store-8.webp",
+              "/images/popular-store-9.webp",
+              "/images/popular-store-10.webp"
+            ]
+            .sort(() => Math.random() - 0.5) // Randomize order
+            .map((src, i) => (
+              <div key={i} className="relative w-[300px] h-[200px] md:w-[400px] md:h-[260px] flex-shrink-0 rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+                <img 
+                  src={src} 
+                  alt={`人气门店 ${i + 1}`} 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div className="text-white">
+                    <p className="font-bold text-lg">人气火爆</p>
+                    <p className="text-sm opacity-90">Store No.{Math.floor(Math.random() * 1000) + 1000}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <style>{`
+          @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .animate-scroll {
+            animation: scroll 40s linear infinite;
+          }
+          .hover\\:pause-scroll:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
+      </section>
+
       {/* CTA Section */}
       <section className="py-32 bg-primary text-primary-foreground relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('/images/orange-pattern.png')] bg-repeat opacity-20" />
