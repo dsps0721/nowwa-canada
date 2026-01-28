@@ -1,44 +1,44 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { ArrowRight, TrendingUp, Users, Leaf } from "lucide-react";
+import { ArrowRight, TrendingUp, Users, Leaf, Star, Sparkles } from "lucide-react";
 import { ProductCarousel } from "@/components/ProductCarousel";
 
 export default function Home() {
   const featuredProducts = [
     {
       id: 1,
-      name: "超大桶美式",
-      description: "750ml超大容量，唤醒一整天的活力。独特的把手设计，时尚便携。",
-      image: "/images/ton-ton-bucket.png",
+      name: "吨吨桶·红菜头紫甘蓝美式",
+      description: "750ml超大容量，红菜头与紫甘蓝的奇妙碰撞，健康与美味的完美平衡。",
+      image: "/images/product-tonton-c-americano.png",
       tags: ["全网爆款", "750ml"]
     },
     {
       id: 2,
-      name: "香水柠檬美式",
-      description: "精选香水柠檬，搭配IIAC金奖咖啡豆，清爽解腻，夏日必备。",
-      image: "/images/product-lemon-splash.png",
-      tags: ["热销TOP1", "清爽"]
+      name: "金杏超模半熟芝士拿铁",
+      description: "精选新疆杏和金太阳喜杏，搭配浓郁半熟芝士，口感层次丰富。",
+      image: "/images/product-cheese-latte.png",
+      tags: ["热销TOP1", "芝士控"]
     },
     {
       id: 3,
-      name: "0糖生椰拿铁",
-      description: "冷榨生椰乳与浓缩咖啡的完美融合，0糖0脂，好喝轻负担。",
-      image: "/images/product-coconut-velvet.png",
-      tags: ["健康首选", "0糖"]
+      name: "元气白桃气泡果咖",
+      description: "NOWWA x 元气森林联名款。清甜白桃遇上气泡美式，夏日解暑神器。",
+      image: "/images/collab-genki-peach.png",
+      tags: ["联名限定", "0糖"]
     },
     {
       id: 4,
-      name: "超大桶拿铁",
-      description: "750ml超大容量，奶香浓郁，快乐加倍。满足你的咖啡瘾。",
-      image: "/images/ton-ton-bucket.png",
-      tags: ["超值", "750ml"]
+      name: "元气葡萄气泡果咖",
+      description: "NOWWA x 元气森林联名款。浓郁葡萄果香，气泡感十足，唤醒活力。",
+      image: "/images/collab-genki-grape.png",
+      tags: ["联名限定", "0糖"]
     },
     {
       id: 5,
-      name: "鲜果咖啡系列",
-      description: "真水果，真咖啡。每一口都是新鲜，每一杯都是惊喜。",
-      image: "/images/hero-tonton-store.png",
-      tags: ["创新", "果咖"]
+      name: "吨吨桶·柚C美式",
+      description: "满满维C，清爽柚香。超大容量，满足你一整天的咖啡需求。",
+      image: "/images/product-tonton-c-americano.png",
+      tags: ["维C满满", "750ml"]
     }
   ];
 
@@ -114,26 +114,104 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Featured Products Carousel */}
-      <section className="py-32 bg-secondary/30">
+      {/* Brand Collaborations - New Section */}
+      <section className="py-24 bg-black text-white overflow-hidden">
         <div className="container">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-block px-4 py-1 bg-primary text-primary-foreground text-sm font-bold uppercase tracking-widest mb-4">
-              全网爆款
+          <div className="flex flex-col md:flex-row items-center justify-between mb-16 gap-8">
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 rounded-full bg-white/10 text-white border border-white/20">
+                <Sparkles className="w-4 h-4 text-yellow-400" />
+                <span className="text-xs font-bold tracking-wide uppercase">强强联手</span>
+              </div>
+              <h2 className="font-heading text-4xl md:text-6xl font-bold tracking-tighter">
+                跨界<span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-yellow-400">联名</span>
+              </h2>
             </div>
-            <h2 className="font-heading text-4xl md:text-5xl font-bold tracking-tighter mb-6">
-              大家都在喝的<span className="text-primary">人气单品</span>
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              从超大容量的吨吨桶到清爽解腻的果咖，总有一款适合你。
+            <p className="text-xl text-gray-400 max-w-md">
+              我们与全球顶尖品牌合作，不断探索咖啡的无限可能，为年轻人带来更多惊喜。
             </p>
           </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Genki Forest Collab */}
+            <div className="group relative h-[500px] overflow-hidden bg-zinc-900 border border-zinc-800">
+              <div className="absolute inset-0 bg-[url('/images/collab-genki-peach.png')] bg-cover bg-center opacity-60 group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
+              <div className="absolute bottom-0 left-0 p-10 w-full">
+                <div className="flex items-center gap-4 mb-6">
+                  <span className="text-2xl font-bold">NOWWA</span>
+                  <span className="text-2xl font-bold text-gray-500">x</span>
+                  <span className="text-2xl font-bold">元气森林</span>
+                </div>
+                <h3 className="text-4xl font-heading font-bold mb-4 leading-tight">
+                  元气果咖系列<br />
+                  <span className="text-primary">0糖0脂0卡</span>
+                </h3>
+                <p className="text-gray-300 mb-8 max-w-sm">
+                  当挪瓦咖啡遇上元气森林，气泡与咖啡的奇妙碰撞。白桃、葡萄双重口味，夏日解暑必备。
+                </p>
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-black rounded-none uppercase tracking-widest">
+                  探索联名款
+                </Button>
+              </div>
+            </div>
+
+            {/* Other Collabs Placeholder */}
+            <div className="grid grid-rows-2 gap-8">
+              <div className="group relative overflow-hidden bg-zinc-900 border border-zinc-800 p-8 flex items-center justify-between">
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-heading font-bold mb-2">喜羊羊与灰太狼</h3>
+                  <p className="text-gray-400 text-sm mb-4">童年回忆杀，樱花季限定</p>
+                  <span className="text-xs font-bold uppercase tracking-widest text-primary">Coming Soon</span>
+                </div>
+                <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-l from-pink-500/20 to-transparent" />
+              </div>
+              <div className="group relative overflow-hidden bg-zinc-900 border border-zinc-800 p-8 flex items-center justify-between">
+                <div className="relative z-10">
+                  <h3 className="text-2xl font-heading font-bold mb-2">七喜 7-UP</h3>
+                  <p className="text-gray-400 text-sm mb-4">清爽柠檬，透心凉</p>
+                  <span className="text-xs font-bold uppercase tracking-widest text-primary">Coming Soon</span>
+                </div>
+                <div className="absolute right-0 top-0 bottom-0 w-1/2 bg-gradient-to-l from-green-500/20 to-transparent" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Products Carousel - Redesigned */}
+      <section className="py-32 bg-secondary/30 overflow-hidden">
+        <div className="container">
+          <div className="flex flex-col md:flex-row items-end justify-between mb-16 gap-8">
+            <div>
+              <div className="inline-block px-4 py-1 bg-primary text-primary-foreground text-sm font-bold uppercase tracking-widest mb-4">
+                全网爆款
+              </div>
+              <h2 className="font-heading text-5xl md:text-7xl font-bold tracking-tighter leading-none">
+                TRENDING<br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">NOW</span>
+              </h2>
+            </div>
+            <div className="hidden md:block mb-2">
+              <Link href="/menu">
+                <Button variant="link" className="text-lg font-bold uppercase tracking-widest hover:text-primary transition-colors p-0">
+                  View All Menu <ArrowRight className="ml-2 h-5 w-5" />
+                </Button>
+              </Link>
+            </div>
+          </div>
           
-          <ProductCarousel products={featuredProducts} />
+          <div className="relative">
+            {/* Decorative Elements */}
+            <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10" />
+            <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-orange-400/10 rounded-full blur-3xl -z-10" />
+            
+            <ProductCarousel products={featuredProducts} />
+          </div>
           
-          <div className="text-center mt-12">
+          <div className="md:hidden text-center mt-12">
             <Link href="/menu">
-              <Button size="lg" className="rounded-none font-bold uppercase tracking-wide">
+              <Button size="lg" className="rounded-none font-bold uppercase tracking-wide w-full">
                 查看完整菜单
               </Button>
             </Link>
