@@ -343,32 +343,60 @@ export default function Home() {
         
         <div className="relative w-full">
           <div className="flex gap-6 animate-scroll hover:pause-scroll w-max px-4">
+            {/* Original List */}
             {[
-              "/images/popular-store-1.webp",
-              "/images/popular-store-3.webp",
-              "/images/popular-store-4.webp",
-              "/images/popular-store-7.webp",
-              "/images/popular-store-8.webp",
-              "/images/popular-store-9.webp",
-              "/images/popular-store-10.webp",
-              "/images/popular-store-new-1.jpg",
-              "/images/popular-store-new-2.jpg",
-              "/images/popular-store-new-3.png",
-              "/images/popular-store-new-4.jpg",
-              "/images/popular-store-new-5.jpg"
-            ]
-            .sort(() => Math.random() - 0.5) // Randomize order
-            .map((src, i) => (
-              <div key={i} className="relative w-[300px] h-[200px] md:w-[400px] md:h-[260px] flex-shrink-0 rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+              { src: "/images/popular-store-1.webp", id: "1024" },
+              { src: "/images/popular-store-3.webp", id: "1088" },
+              { src: "/images/popular-store-4.webp", id: "1156" },
+              { src: "/images/popular-store-7.webp", id: "1234" },
+              { src: "/images/popular-store-8.webp", id: "1345" },
+              { src: "/images/popular-store-9.webp", id: "1456" },
+              { src: "/images/popular-store-10.webp", id: "1567" },
+              { src: "/images/popular-store-new-1.jpg", id: "1678" },
+              { src: "/images/popular-store-new-2.jpg", id: "1789" },
+              { src: "/images/popular-store-new-3.png", id: "1890" },
+              { src: "/images/popular-store-new-4.jpg", id: "1901" },
+              { src: "/images/popular-store-new-5.jpg", id: "2012" }
+            ].map((item, i) => (
+              <div key={`original-${i}`} className="relative w-[300px] h-[200px] md:w-[400px] md:h-[260px] flex-shrink-0 rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
                 <img 
-                  src={src} 
-                  alt={`人气门店 ${i + 1}`} 
+                  src={item.src} 
+                  alt={`人气门店 ${item.id}`} 
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
                   <div className="text-white">
                     <p className="font-bold text-lg">人气火爆</p>
-                    <p className="text-sm opacity-90">Store No.{Math.floor(Math.random() * 1000) + 1000}</p>
+                    <p className="text-sm opacity-90">Store No.{item.id}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+            {/* Duplicate List for Seamless Loop */}
+            {[
+              { src: "/images/popular-store-1.webp", id: "1024" },
+              { src: "/images/popular-store-3.webp", id: "1088" },
+              { src: "/images/popular-store-4.webp", id: "1156" },
+              { src: "/images/popular-store-7.webp", id: "1234" },
+              { src: "/images/popular-store-8.webp", id: "1345" },
+              { src: "/images/popular-store-9.webp", id: "1456" },
+              { src: "/images/popular-store-10.webp", id: "1567" },
+              { src: "/images/popular-store-new-1.jpg", id: "1678" },
+              { src: "/images/popular-store-new-2.jpg", id: "1789" },
+              { src: "/images/popular-store-new-3.png", id: "1890" },
+              { src: "/images/popular-store-new-4.jpg", id: "1901" },
+              { src: "/images/popular-store-new-5.jpg", id: "2012" }
+            ].map((item, i) => (
+              <div key={`duplicate-${i}`} className="relative w-[300px] h-[200px] md:w-[400px] md:h-[260px] flex-shrink-0 rounded-2xl overflow-hidden shadow-lg group cursor-pointer">
+                <img 
+                  src={item.src} 
+                  alt={`人气门店 ${item.id}`} 
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <div className="text-white">
+                    <p className="font-bold text-lg">人气火爆</p>
+                    <p className="text-sm opacity-90">Store No.{item.id}</p>
                   </div>
                 </div>
               </div>
@@ -382,7 +410,7 @@ export default function Home() {
             100% { transform: translateX(-50%); }
           }
           .animate-scroll {
-            animation: scroll 40s linear infinite;
+            animation: scroll 80s linear infinite;
           }
           .hover\\:pause-scroll:hover {
             animation-play-state: paused;
