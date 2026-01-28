@@ -121,7 +121,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </ul>
           </div>
 
-
+          <div className="md:col-span-2 flex justify-start md:justify-end">
+            <div className="flex flex-col items-center md:items-end">
+              <h4 className="font-heading font-bold text-lg mb-4 text-primary">联系招商经理</h4>
+              <div className="bg-white p-2 rounded-lg">
+                <img 
+                  src="/images/contact-qr.png" 
+                  alt="联系招商经理" 
+                  className="w-32 h-32 object-contain"
+                />
+              </div>
+              <p className="text-xs text-muted-foreground mt-2">扫码咨询加盟详情</p>
+            </div>
+          </div>
         </div>
         <div className="container mt-16 pt-8 border-t border-white/10 text-center text-xs text-muted-foreground">
           © {new Date().getFullYear()} 挪瓦咖啡加拿大总代理. 版权所有.
