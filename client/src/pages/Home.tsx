@@ -348,9 +348,7 @@ export default function Home() {
           <div className="flex gap-6 animate-scroll hover:pause-scroll w-max px-4">
             {/* Original List */}
             {[
-              { src: "/images/popular-store-3.webp", id: "1088" },
               { src: "/images/popular-store-8.webp", id: "1345" },
-              { src: "/images/popular-store-9.webp", id: "1456" },
               { src: "/images/popular-store-10.webp", id: "1567" },
               { src: "/images/popular-store-new-1.jpg", id: "1678" },
               { src: "/images/popular-store-new-2.jpg", id: "1789" },
@@ -374,9 +372,7 @@ export default function Home() {
             ))}
             {/* Duplicate List for Seamless Loop */}
             {[
-              { src: "/images/popular-store-3.webp", id: "1088" },
               { src: "/images/popular-store-8.webp", id: "1345" },
-              { src: "/images/popular-store-9.webp", id: "1456" },
               { src: "/images/popular-store-10.webp", id: "1567" },
               { src: "/images/popular-store-new-1.jpg", id: "1678" },
               { src: "/images/popular-store-new-2.jpg", id: "1789" },
