@@ -7,7 +7,7 @@ import { useI18n } from "@/contexts/I18nContext";
 
 export default function Franchise() {
   const { t, language } = useI18n();
-  const [state, handleSubmit] = useForm(import.meta.env.VITE_FORMSPREE_ID || "YOUR_FORM_ID");
+  const [state, handleSubmit] = useForm(import.meta.env.VITE_FORMSPREE_ID || "xdagqeon");
 
   if (state.succeeded) {
     return (
