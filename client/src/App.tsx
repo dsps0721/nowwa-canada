@@ -6,6 +6,7 @@ import Home from "@/pages/Home";
 import About from "@/pages/About";
 
 import Franchise from "@/pages/Franchise";
+import ThankYou from "@/pages/ThankYou";
 
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
@@ -20,6 +21,7 @@ function Router() {
         <Route path="/about" component={About} />
 
         <Route path="/franchise" component={Franchise} />
+        <Route path="/thank-you" component={ThankYou} />
 
         <Route component={NotFound} />
       </Switch>
