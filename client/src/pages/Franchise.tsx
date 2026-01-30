@@ -139,8 +139,8 @@ export default function Franchise() {
               </div>
               
               <div className="space-y-2">
-                <Label htmlFor="phone">{t('franchise.form.phone')}</Label>
-                <Input id="phone" type="tel" name="phone" placeholder="+1 (555) 000-0000" className="rounded-none border-border focus:border-primary" required />
+                <Label htmlFor="phone">{t('franchise.form.phone')} {t('franchise.form.optional')}</Label>
+                <Input id="phone" type="tel" name="phone" placeholder="+1 (555) 000-0000" className="rounded-none border-border focus:border-primary" />
                 <ValidationError prefix="Phone" field="phone" errors={state.errors} />
               </div>
               
