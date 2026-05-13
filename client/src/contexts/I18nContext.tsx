@@ -85,6 +85,8 @@ const translations = {
     'footer.explore': 'Explore',
     'footer.contact': 'Contact Manager',
     'footer.scan': 'Scan to Consult',
+    'footer.auth': 'Authorization',
+    'footer.auth.click': 'Click to view',
     'footer.copyright': '© 2026 Nowwa Coffee Canada. All rights reserved.',
     
     // Franchise Page
@@ -226,6 +228,8 @@ const translations = {
     'footer.explore': '探索',
     'footer.contact': '联系招商经理',
     'footer.scan': '扫码咨询加盟详情',
+    'footer.auth': '授权书',
+    'footer.auth.click': '点击查看',
     'footer.copyright': '© 2026 挪瓦咖啡加拿大总代理. 版权所有.',
     
     // Franchise Page

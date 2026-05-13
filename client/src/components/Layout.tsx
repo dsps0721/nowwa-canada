@@ -120,7 +120,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
           <div className="md:col-span-2 flex justify-start md:justify-end gap-8">
             <div className="flex flex-col items-center md:items-end">
-              <h4 className="font-heading font-bold text-lg mb-4 text-primary">Authorization</h4>
+              <h4 className="font-heading font-bold text-lg mb-4 text-primary">{t('footer.auth')}</h4>
               <div className="bg-white p-2 rounded-lg">
                 <img 
                   src="/authorization_letter.jpg" 
@@ -129,7 +129,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   onClick={() => window.open('/authorization_letter.jpg', '_blank')}
                 />
               </div>
-              <p className="text-xs text-muted-foreground mt-2">Click to view</p>
+              <p className="text-xs text-muted-foreground mt-2">{t('footer.auth.click')}</p>
             </div>
             <div className="flex flex-col items-center md:items-end">
               <h4 className="font-heading font-bold text-lg mb-4 text-primary">{t('footer.contact')}</h4>
