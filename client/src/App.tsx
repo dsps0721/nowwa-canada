@@ -6,7 +6,7 @@ import Home from "@/pages/Home";
 import About from "@/pages/About";
 
 import Franchise from "@/pages/Franchise";
-import ThankYou from "@/pages/ThankYou";
+
 import Media from "@/pages/Media";
 import MediaArticle from "@/pages/MediaArticle";
 
@@ -24,7 +24,7 @@ function Router() {
         <Route path="/about" component={About} />
 
         <Route path="/franchise" component={Franchise} />
-        <Route path="/thank-you" component={ThankYou} />
+
         <Route path="/media" component={Media} />
         <Route path="/media/:slug" component={MediaArticle} />
 
