@@ -118,7 +118,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </ul>
           </div>
 
-          <div className="md:col-span-2 flex justify-start md:justify-end">
+          <div className="md:col-span-2 flex justify-start md:justify-end gap-8">
+            <div className="flex flex-col items-center md:items-end">
+              <h4 className="font-heading font-bold text-lg mb-4 text-primary">Authorization</h4>
+              <div className="bg-white p-2 rounded-lg">
+                <img 
+                  src="/authorization_letter.jpg" 
+                  alt="Authorization Letter" 
+                  className="w-32 h-32 object-cover cursor-pointer hover:opacity-90 transition-opacity"
+                  onClick={() => window.open('/authorization_letter.jpg', '_blank')}
+                />
+              </div>
+              <p className="text-xs text-muted-foreground mt-2">Click to view</p>
+            </div>
             <div className="flex flex-col items-center md:items-end">
               <h4 className="font-heading font-bold text-lg mb-4 text-primary">{t('footer.contact')}</h4>
               <div className="bg-white p-2 rounded-lg">
