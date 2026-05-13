@@ -6,11 +6,15 @@ import Home from "@/pages/Home";
 import About from "@/pages/About";
 
 import Franchise from "@/pages/Franchise";
+import ThankYou from "@/pages/ThankYou";
+import Media from "@/pages/Media";
+import MediaArticle from "@/pages/MediaArticle";
 
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { I18nProvider } from "./contexts/I18nContext";
+import { HelmetProvider } from "react-helmet-async";
 
 function Router() {
   return (
@@ -20,6 +24,9 @@ function Router() {
         <Route path="/about" component={About} />
 
         <Route path="/franchise" component={Franchise} />
+        <Route path="/thank-you" component={ThankYou} />
+        <Route path="/media" component={Media} />
+        <Route path="/media/:slug" component={MediaArticle} />
 
         <Route component={NotFound} />
       </Switch>
@@ -30,14 +37,16 @@ function Router() {
 function App() {
   return (
     <ErrorBoundary>
-      <I18nProvider>
-        <ThemeProvider defaultTheme="light">
-          <TooltipProvider>
-            <Toaster />
-            <Router />
-          </TooltipProvider>
-        </ThemeProvider>
-      </I18nProvider>
+      <HelmetProvider>
+        <I18nProvider>
+          <ThemeProvider defaultTheme="light">
+            <TooltipProvider>
+              <Toaster />
+              <Router />
+            </TooltipProvider>
+          </ThemeProvider>
+        </I18nProvider>
+      </HelmetProvider>
     </ErrorBoundary>
   );
 }

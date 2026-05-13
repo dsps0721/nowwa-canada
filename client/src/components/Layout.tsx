@@ -121,7 +121,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <h4 className="font-heading font-bold text-lg mb-4 text-primary">{t('footer.contact')}</h4>
               <div className="bg-white p-2 rounded-lg">
                 <img 
-                  src="/images/contact-qr.png" 
+                  src="/images/qr-code-new.png" 
                   alt="Contact Manager" 
                   className="w-32 h-32 object-contain"
                 />
