@@ -15,6 +15,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { name: t('nav.home'), path: "/" },
     { name: t('nav.about'), path: "/about" },
     { name: t('nav.franchise'), path: "/franchise" },
+    { name: t('nav.media') || 'Media', path: "/media" },
   ];
 
   const isActive = (path: string) => location === path;
@@ -113,6 +114,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <li><Link href="/"><a className="hover:text-primary transition-colors">{t('nav.home')}</a></Link></li>
               <li><Link href="/about"><a className="hover:text-primary transition-colors">{t('nav.about')}</a></Link></li>
               <li><Link href="/franchise"><a className="hover:text-primary transition-colors">{t('nav.franchise')}</a></Link></li>
+              <li><Link href="/media"><a className="hover:text-primary transition-colors">{t('nav.media') || 'Media'}</a></Link></li>
             </ul>
           </div>
 
