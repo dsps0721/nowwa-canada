@@ -14,6 +14,7 @@ const translations = {
     'nav.home': 'Home',
     'nav.about': 'About Us',
     'nav.franchise': 'Franchise',
+    'nav.media': 'Media',
     'nav.join': 'Join Now',
     
     // Hero
@@ -154,6 +155,7 @@ const translations = {
     'nav.home': '首页',
     'nav.about': '关于我们',
     'nav.franchise': '加盟合作',
+    'nav.media': '新闻报道',
     'nav.join': '立即加盟',
     
     // Hero
